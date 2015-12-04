@@ -1,0 +1,437 @@
+* {
+	box-sizing: border-box;
+	/*border: 1px dotted red;*/
+}
+html, body {
+	min-height: 100%;
+}
+body {
+	min-width: 580px;
+	background-color: #464646;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+}
+#busqueda{
+	background-color: #b90000;
+	border: 1px solid #464646;
+	border-radius: 10px;
+	color: #fff;
+}
+.grid {
+	width: 960px; 	/* width: 100%; */
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;			   /* NEW, Spec - Opera 12.1, Firefox 20+ */
+	margin: 0 auto;
+}
+.grid2 {
+	width: 960px; /* width: 100%; */
+	height: 100%;
+	margin: 0 auto;
+}
+.clear {
+	clear: both;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+[class*="col-"] {
+	padding: 10px;
+}
+p{
+	font-size: 13px;
+}
+#header {
+	background-color: #f7f7f7;
+	padding: 0;
+}
+#main {
+	background-color: #f7f7f7;
+	clear: both;
+}
+#footer {
+	clear: both;
+}
+#header .grid #logo {
+	height: 110px;
+	float: left;
+	padding-bottom: 0;
+}
+#header .grid #logo h1 {
+	margin: 0;
+	height: 100%;
+}
+#header .grid #logo img {
+	height:100%;
+}
+#header #search {
+	position: relative;
+    height: 50px;
+    top: 47px;
+}
+#header #search .search-input{
+	font-size: 12px;
+	width: 96%;
+    height: 30px;
+	background: #fff;
+    padding: 5px 10px;
+    line-height: 1.5;
+    border-radius: 15px !important;
+}
+#header #search button{
+	width: 29px;
+	height: 26px;
+	color: #464646;
+	background-color: #fff;
+	cursor: pointer;
+	margin-left: -36px;
+    font-weight: bold;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+}
+#header #search .fa-search:before{
+	content: "\f002";
+    margin-right: 10px;
+}
+#header #header-links {
+	text-align: right;
+}
+#header #header-links a{
+	color: #464646;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+}
+#header #header-links a:hover{
+	color: #b90000;
+}
+#header #header-links .top-links {
+	padding: 0 0 20px 0;
+}
+#header #header-links .bottom-links {
+	padding: 0;
+	height: 40px;
+}
+#header #header-links .bottom-links .account, #header #header-links .bottom-links .shopping-cart {
+	background-color: #b90000;
+	border: 1px solid #464646;
+	border-radius: 10px;
+	float: right;
+	padding: 10px 0;
+}
+#header #header-links .bottom-links .account a, #header #header-links .bottom-links .shopping-cart a{
+	color: #fff;
+	padding: 11px;
+}
+#header #header-links .bottom-links .account:hover, #header #header-links .bottom-links .shopping-cart:hover{
+	background-color: #464646;
+	box-shadow: 2px 2px 5px #999;
+}
+#header #header-links .bottom-links .shopping-cart {
+	margin-left: 10px;
+}
+#main #content {
+	height: 100%;
+	float: left;
+	text-align: justify;
+	padding-right: 20px;
+}
+#main a{
+	color: #b90000;
+	font-weight: bold;
+	text-decoration: none;
+	cursor: pointer;
+}
+#main a:hover{
+	color: #464646;
+	text-decoration: underline;
+}
+#footer #footer-top {
+	background-color: #d0d0d0;
+	color: #000;
+}
+#footer #footer-top a{
+	color: #000;
+}
+#footer #footer-top a:hover{
+	color: #464646;
+}
+#footer #footer-top i{
+	font-size: 25px;
+	cursor: pointer;
+}
+#footer #footer-top i.fa-facebook-square:hover{
+	color: #3b5998;
+}
+#footer #footer-top i.fa-twitter-square:hover{
+	color: #55acee;
+}
+#footer #footer-top i.fa-google-plus-square:hover{
+	color: #d34836;
+}
+#footer #footer-bottom {
+	background-color: #464646;
+	color: #d0d0d0;
+}
+#footer .footerInf, #footer .footerInf2 {
+	float: left;
+	padding: 0;
+	margin: auto 0;
+}
+
+#footer .footerInf2 {
+	text-align: right;
+}
+#footer .footerInf2 span {
+    position: relative;
+    top: -3px;
+}
+
+#footer p {
+	margin: 0;
+}
+
+#footer a {
+	color: #fff;
+}
+	
+#footer a:hover {
+	color: #d0d0d0;
+	text-decoration:underline;
+	cursor:pointer;
+}
+
+#footer a:active{
+	color: #fff;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 1050px) {
+	.grid, .grid2 {
+		width:100% !important;
+	}
+	#header .grid #logo{
+		height: auto;
+	}
+	#header .grid #logo img{
+		height: 90px;
+	}
+	#main #slider-title{
+		height: 47px;
+	}
+	#main #slider-title h2{
+		font-size: 20px;
+	}
+	#main .grid2 .items .item{
+		width: 14.75%;
+		height: 200px;
+		border: 3px solid #b90000;
+		margin-left: 2.3%;
+		padding: 2px;
+	}
+	#main .grid2 .items .item img{
+		height: 120px;
+	} 
+	#main .grid2 .items .item a.add-basket{
+		font-size: 12px;
+		font-weight: normal;
+		padding: 4px;
+	}
+	#main .grid .offer, #main .grid .best-valued, #main .grid .most-sold {
+		height: 92px;
+		border: 2px solid #464646;
+		padding: 0;
+		overflow: hidden;
+	}
+	#main .grid img.offer-ribbon {
+		width: 10%;
+		height: 10%;
+		margin-top: -6px;
+		margin-left: 22%;
+	}
+	#main .grid img.best-valued-ribbon {
+		width: 9%;
+		margin-left: 22%;
+	}
+	#main .grid img.most-sold-ribbon {
+		width: 9%;
+	}
+	#footer #footer-top .col-1 {
+		width: 81px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	/* For mobile phones: */
+	body {
+		text-align: center;
+	}
+	div {
+		width: 100% !important;
+		float: none !important;
+		clear: both !important;
+		text-align: center !important;
+	}
+	p {
+		padding: 0 20px;
+	}
+	.grid {
+		display: block;
+	}
+	#header {
+		height: 100%;
+	}
+	#header #search {
+		top: 0px;
+	}
+	#header .grid #logo img{
+		height: 110px;
+	}
+	#header #header-links .bottom-links {
+		width: 196px !important;
+    	margin: 0 auto;
+	}
+	#header #header-links .bottom-links .account, #header #header-links .bottom-links .shopping-cart {
+		float: right !important;
+    	clear: none !important;
+	}
+	#header #header-links .bottom-links .account {
+		width: 106px !important;
+	}
+	#header #header-links .bottom-links .shopping-cart {
+		width: 80px !important;
+	}
+	#main {
+		height: 100%;
+	}
+	#main #slider-title{
+		height: 33px;
+		margin: 0;
+	}
+	#main #slider-title h2{
+		font-size: 16px;
+		padding: 5px;
+	}
+	#main .grid2 .items .item:first-child{
+		margin-left: 5.5%;
+	}
+	#main .grid2 .items .item{
+		float: left !important;
+		clear: none !important;
+		width: 22% !important;
+		margin-right: 5.5%;
+		margin-left: 5.5%;
+	}
+	#main .grid2 .items .item p{
+		font-size: 11px;
+	}
+	/* Elimina los 3 últimos artículos para no sobrecargar la página de contenido*/
+	#main .grid2 .items .item:nth-child(4), #main .grid2 .items .item:nth-child(5),
+	#main .grid2 .items .item:nth-child(6){
+		display: none;
+	}
+	#main .banners{
+		display: none;
+		visibility: hidden;
+	}	
+	#main #mapa-web span{
+		left: 0px;
+	}
+	#main #busqueda{
+		padding: 10px !important; 
+	}
+	#main #sidebar {
+		height: 100%;
+		margin: 27px 0;
+	}
+	#main #content img{
+		display: none;
+		visibility: hidden;
+	}
+	#main .cambioDia{
+		margin-bottom: 20px;
+	}
+	#footer div{
+		padding: 5px !important;
+	}
+}
+
+@media only screen and (max-width: 1050px) {
+	.grid, .grid2 {
+		width:100% !important;
+	}
+	#header .grid #logo{
+		height: auto;
+	}
+	#header .grid #logo img{
+		height: 90px;
+	}
+	#footer #footer-top .col-1 {
+		width: 81px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	/* For mobile phones: */
+	body {
+		text-align: center;
+	}
+	div {
+		width: 100% !important;
+		float: none !important;
+		clear: both !important;
+		text-align: center !important;
+	}
+	p {
+		padding: 0 20px;
+	}
+	.grid {
+		display: block;
+	}
+	#header {
+		height: 100%;
+	}
+	#header #search {
+		top: 0px;
+	}
+	#header .grid #logo img{
+		height: 110px;
+	}
+	#header #header-links .bottom-links {
+		width: 196px !important;
+    	margin: 0 auto;
+	}
+	#header #header-links .bottom-links .account, #header #header-links .bottom-links .shopping-cart {
+		float: right !important;
+    	clear: none !important;
+	}
+	#header #header-links .bottom-links .account {
+		width: 106px !important;
+	}
+	#header #header-links .bottom-links .shopping-cart {
+		width: 80px !important;
+	}
+	#main {
+		height: 100%;
+	}
+	#footer div{
+		padding: 5px !important;
+	}
+}

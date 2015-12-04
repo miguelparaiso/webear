@@ -1,0 +1,211 @@
+#main #mapa-web{
+	width: 100%;
+	height: 38px;
+	background-image: url("../img/mapa_web.jpg");
+	background-size: cover;
+	margin: 0 auto 5px auto;
+}
+#main #mapa-web .grid2 span{
+	position: absolute;
+	color: white;
+	padding: 10px;
+	z-index: 1;
+}
+#main #mapa-web .grid2 span a{
+	color: white;
+}
+#main .grid .filters-mobile {
+	display: none;
+	visibility: hidden;
+}
+#main .grid #filters .filter {
+	margin-bottom: 25px;
+}
+#main .grid #filters .filter:last-child {
+	margin-bottom: 0;
+}
+#main .grid #filters .filter .filter-title {
+	color: #b90000;
+	font-size: 14px;
+	font-weight: bold; 
+}
+#main .grid #filters .filter .filter-item-active{
+	font-weight: bold;
+}
+#main .grid #filters .filter a{
+	color: #464646;
+	font-weight: normal;
+}
+#main .grid #filters .filter p{
+	margin: 9px 0;
+}
+#main .grid #filters .filter .filter-separator {
+	border-bottom: 1px dashed #464646;
+	padding: 0;
+}
+#main .grid #search-items .search-pages {
+	height: 44px;
+	border-top: 1px solid #464646;
+	border-bottom: 1px solid #464646;
+	padding: 10px 0;
+}
+#main .grid #search-items .search-pages span{
+	float: left;
+	margin-top: 3px;
+	margin-right: 10px;
+}
+#main .grid #search-items .search-pages input {
+	width: 40px;
+	float: left;
+	margin-top: 1px;
+	margin-right: 83px;
+}
+#main .grid #search-items .search-pages select {
+	float: left;
+	margin-top: 2px;
+}
+#main .grid #search-items .search-pages .page-num {
+	width: 22px !important;
+	float: left !important;
+    clear: none !important;
+	font-size: 14px;
+	text-align: center;
+	border: 1px solid #464646;
+	border-radius: 12px;
+	padding: 2px 0;
+	margin-right: 8px;
+}
+#main .grid #search-items .search-pages .page-num-selected {
+	background-color: #b90000;
+}
+#main .grid #search-items .search-pages .page-num-last {
+	margin-right: 83px;
+}
+#main .grid #search-items .search-pages .page-num a {
+	color: #464646;
+	padding: 6px;
+}
+#main .grid #search-items .search-pages .page-num-selected a {
+	color: #fff;
+	text-decoration: none;
+	padding: 6px;
+}
+#main .grid #search-items .search-pages .page-num:hover {
+	background-color: #b90000;
+}
+#main .grid #search-items .search-pages .page-num a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+#main .grid #search-items .search-pages a.arrow {
+	color: #464646;
+	position: relative;
+    top: 2px;
+	margin-left: 8px;
+}
+#main .grid #search-items .search-pages a.arrow:hover {
+	color: #b90000;
+}
+#main .grid #search-items .search-separator {
+	border-bottom: 1px solid #464646;
+	padding: 0;
+}
+#main .grid #search-items .search-item {
+	display: flex;
+}
+#main .grid #search-items .search-item-img {
+	height: 178px;
+	border: 1px solid #464646;
+	background-color: #fff;
+	text-align: center;
+	padding: 0;
+	margin: 15px 15px 15px 0;
+}
+#main .grid #search-items .search-item-img img {
+	height: 168px;
+}
+#main .grid #search-items .search-item-content h3 {
+	margin-top: 10px;
+	margin-bottom: 12px;
+}
+#main .grid #search-items p{
+	font-size: 12px;
+}
+#main .grid #search-items .tags {
+	color: #464646;
+	font-size: 13px;
+}
+#main .grid #search-items .search-item-price span {
+	color: #b90000;
+	font-size: 18px;
+	font-weight: bold;
+}
+#main .grid #search-items .search-item-price {
+	margin-top: 34px;
+}
+#main .grid #search-items .search-item-price a.add-basket {
+	height: 30px;
+	color: #fff;
+	text-align: center;
+	font-size: 14px;
+	background: #b90000;
+	padding: 12px;
+	position: relative;
+    top: 7px;
+}
+#main .grid #search-items .search-item-price a.add-basket:hover{
+	background: #464646;
+	text-decoration: none;
+	box-shadow: 2px 2px 5px #999;
+}
+
+@media only screen and (max-width: 1050px) {
+	#main .grid #search-items .search-pages .page-num-last, #main .grid #search-items .search-pages input {
+		margin-right: 2%;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	#main #mapa-web .grid2 span {
+		position: relative;
+    	top: 9px;
+	}
+	#main .grid #filters {
+		display: none;
+		visibility: hidden;
+	}
+	#main .grid .filters-mobile {
+		display: block;
+		visibility: visible;
+		margin: 15px 0 20px 0;
+	}
+	#main .grid .filters-mobile a{
+		height: 30px;
+		color: #fff;
+		text-align: center;
+		font-size: 14px;
+		background: #b90000;
+		padding: 12px;
+		position: relative;
+		top: 7px;
+	}
+	#main .grid .filters-mobile a:hover{
+		background: #464646;
+		text-decoration: none;
+		box-shadow: 2px 2px 5px #999;
+	}
+	#main .grid #search-items .search-item{
+		display: block;
+	}
+	#main .grid #search-items .search-item-content {
+		padding: 10px 10px 1px 10px;
+	}
+	#main .grid #search-items .search-item-img {
+		width: 178px !important;
+		margin: 15px auto 0 auto;
+	}
+	#main .grid #search-items .search-item-price {
+		padding: 0 10px 33px 10px;
+		margin: 0;
+	}
+}

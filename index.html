@@ -1,0 +1,289 @@
+<!--
+    Autor=Miguel Paraiso Martin
+    Fecha=10-nov-2015
+    Licencia=GPL v3
+    Version=1.0
+    Descripcion=Página principal de la tienda online "Tuvino"
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Página principal - Tuvino</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/jssor.slider.min.js"></script>
+	<script type="text/javascript" src="js/menu.js"></script>
+	<script type="text/javascript" src="js/slider.js"></script>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/menu.css">
+	<link rel="stylesheet" href="css/slider.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+  </head>
+  <body>
+	<div id="header" class="col-12">
+		<div class="grid">
+			<div id="logo" class="col-4">
+				<h1><a href="index.html"><img src="img/logo.png" alt="Logo Tuvino"/></a></h1>
+			</div>
+			<div id="search" class="col-4">
+				<input type="text" class="search-input" name="buscador" autocomplete="off" placeholder="Buscar...">
+				<button type="submit" class="fa fa-search" title="Buscar" alt="Buscar"></button>
+			</div>
+			<div id="header-links" class="col-4">
+				<div class="top-links col-12">
+					<a href="#">Español - ES</a><span> | </span><a href="#">Contacto</a><span> | </span><a href="#">Ayuda</a>
+				</div>
+				<div class="bottom-links col-12">
+					<div class="shopping-cart">
+						<a href="#"><i class="fa fa-shopping-cart"></i> <b>Cesta</b></a>
+					</div>				
+					<div class="account">
+						<a href="#"><i class="fa fa-user"></i> <b>Mi cuenta</b></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="menu">
+			<ul>
+				<li><a href="index.html"><span>Home</span></a></li>
+				<li class="active has-sub"><a href="busqueda.html"><span>Vinos </span></a>
+					<ul>
+						<li><a href="busqueda.html"><span>Tinto</span></a></li>
+						<li><a href="busqueda.html"><span>Blanco</span></a></li>
+						<li><a href="busqueda.html"><span>Rosados</span></a></li>
+						<li><a href="busqueda.html"><span>Otros</span></a></li>
+					</ul>
+				</li>
+				<li><a href="#"><span>Accesorios</span></a></li>
+				<li><a href="#"><span>Cursos de cata</span></a></li>
+				<li><a href="#"><span>Novedades</span></a></li>
+				<li class="last"><a href="#"><span>Ofertas</span></a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="main">
+		<div id="slider-title" class="grid">
+			<h2>La mejor selección de vinos a su alcance</h2>
+		</div>
+		<!-- SLIDER -->
+		<div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1300px !important; 
+									height: 350px; overflow: hidden; visibility: hidden;">
+	        <!-- Loading Screen -->
+	        <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+	            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; 
+							left: 0px; width: 100%; height: 100%;"></div>
+	            <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;
+							top:0px;left:0px;width:100%;height:100%;"></div>
+	        </div>
+	        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1300px !important;
+										 height: 500px; overflow: hidden;">
+	            <div data-p="225.00" style="display: none;">
+	                <img data-u="image" src="img/slider/slider1.jpg" />
+	            </div>
+	            <div data-p="225.00" style="display: none;">
+	                <img data-u="image" src="img/slider/slider2.jpg" />
+	            </div>
+	            <div data-p="225.00" style="display: none;">
+	                <img data-u="image" src="img/slider/slider3.jpg" />
+	            </div>
+				<div data-p="225.00" style="display: none;">
+	                <img data-u="image" src="img/slider/slider4.jpg" />
+	            </div>
+	        </div>
+	        <!-- Bullet Navigator -->
+	        <div data-u="navigator" class="jssorb05" style="bottom: 16px; right: 6px; width: 100px; height: 16px; 
+															left: 520px;" noscale="true" autocenter="1">
+	            <!-- bullet navigator item prototype -->
+	            <div data-u="prototype" style="width:16px !important;height:16px;"></div>
+	        </div>
+	        <!-- Arrow Navigator -->
+	        <span data-u="arrowleft" class="jssora22l" style="top: 202.5px; left: 8px;" noscale="true" autocenter="2"></span>
+	        <span data-u="arrowright" class="jssora22r" style="top: 202.5px; right: 8px;" noscale="true" autocenter="2"></span>
+	        <a href="http://www.jssor.com" style="display:none">Jssor Slider</a>
+	    </div>
+	    <script>
+	        jssor_1_slider_init();
+	    </script>
+		<div class="grid2">
+			<div class="title col-12">
+				<h3>Los más vendidos</h3>
+			</div>
+			<div class="items">
+				<div class="item">
+					<a href="#" title="Ir al artículo">
+						<div class="item-link">
+							<img src="img/best-selling/1.jpg" alt="1o vino más vendido"/>
+							<p>Tierras de Cair<br/>
+								Reserva 2009</p>
+						</div>
+					</a>
+					<a href="#" class="add-basket">Añadir a la cesta</a>
+				</div>
+				<div class="item">
+					<a href="#" title="Ir al artículo">
+						<div class="item-link">
+							<img src="img/best-selling/2.jpg" alt="2o vino más vendido"/>
+							<p>Alfredo Roca<br/>
+								Chenin 2004</p>
+						</div>
+					</a>
+					<a href="#" class="add-basket">Añadir a la cesta</a>
+				</div>
+				<div class="item">
+					<a href="#" title="Ir al artículo">
+						<div class="item-link">
+							<img src="img/best-selling/3.jpg" alt="3o vino más vendido"/>
+							<p>Mara Martín<br/>
+								D.O. Monterrei</p>
+						</div>
+					</a>
+					<a href="#" class="add-basket">Añadir a la cesta</a>
+				</div>
+				<div class="item">
+					<a href="#" title="Ir al artículo">
+						<div class="item-link">
+							<img src="img/best-selling/4.jpg" alt="4o vino más vendido"/>
+							<p>Borsao Bole<br/>
+								2013</p>
+						</div>
+					</a>
+					<a href="#" class="add-basket">Añadir a la cesta</a>
+				</div>
+				<div class="item">
+					<a href="#" title="Ir al artículo">
+						<div class="item-link">
+							<img src="img/best-selling/5.jpg" alt="5o vino más vendido"/>
+							<p>Serbal<br/>
+								Chardonnay 2009</p>
+						</div>
+					</a>
+					<a href="#" class="add-basket">Añadir a la cesta</a>
+				</div>
+				<div class="item">
+					<a href="#" title="Ir al artículo">
+						<div class="item-link">
+							<img src="img/best-selling/6.jpg" alt="6o vino más vendido"/>
+							<p>Coto de Hayas<br/>
+								Garncha 2011</p>
+						</div>
+					</a>
+					<a href="#" class="add-basket">Añadir a la cesta</a>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="grid banners">
+			<img class="offer-ribbon" src="img/offer-ribbon.png" alt="Cinta en la que pone oferta"/>
+			<div class="col-4 offer">
+				<a href="#" title="Ir al artículo"><img class="banner" src="img/botella_1.jpg" alt="Vino en oferta"/></a>
+			</div>
+			<img class="best-valued-ribbon" src="img/best-valued-ribbon.png" alt="Galardón mejor valorado"/>
+			<div class="col-4 best-valued">
+				<a href="#" title="Ir al artículo"><img class="banner" src="img/botella_2.jpg" alt="Vino mejor valorado"/></a>
+			</div>
+			<img class="most-sold-ribbon" src="img/most-sold-ribbon.png" alt="Galardón más vendido"/>
+			<div class="col-4 most-sold">
+				<a href="#" title="Ir al artículo"><img class="banner" src="img/botella_3.jpg" alt="Vino más vendido"/></a>
+			</div>
+		</div>
+		<div class="grid2">
+			<div class="title col-12">
+				<h3>Recomendaciones</h3>
+			</div>
+			<div class="items">
+				<div class="item">
+					<a href="#" title="Ir al artículo">
+						<div class="item-link">
+							<img src="img/recommended/1.jpg" alt="1o vino recomendado"/>
+							<p>Septima<br/>
+								Sauvignon 2013</p>
+						</div>
+					</a>
+					<a href="#" class="add-basket">Añadir a la cesta</a>
+				</div>
+				<div class="item">
+					<a href="#" title="Ir al artículo">
+						<div class="item-link">
+							<img src="img/recommended/2.jpg" alt="2o vino recomendado"/>
+							<p>Coto de Hayas<br/>
+								Sólo Tiólico 2013</p>
+						</div>
+					</a>
+					<a href="#" class="add-basket">Añadir a la cesta</a>
+				</div>
+				<div class="item">
+					<a href="#" title="Ir al artículo">
+						<div class="item-link">
+							<img src="img/recommended/3.jpg" alt="3o vino recomendado"/>
+							<p>Samitier Roble<br/>
+								Garncha 2012</p>
+						</div>
+					</a>
+					<a href="#" class="add-basket">Añadir a la cesta</a>
+				</div>
+				<div class="item">
+					<a href="#" title="Ir al artículo">
+						<div class="item-link">
+							<img src="img/recommended/4.jpg" alt="4o vino recomendado"/>
+							<p>Cinco Tierras<br/>
+								Torrontes 2011</p>
+						</div>
+					</a>
+					<a href="#" class="add-basket">Añadir a la cesta</a>
+				</div>
+				<div class="item">
+					<a href="#" title="Ir al artículo">
+						<div class="item-link">
+							<img src="img/recommended/5.jpg" alt="5o vino recomendado"/>
+							<p>Beso de Vino<br/>
+								Selección 2011</p>
+						</div>
+					</a>
+					<a href="#" class="add-basket">Añadir a la cesta</a>
+				</div>
+				<div class="item">
+					<a href="#" title="Ir al artículo">
+						<div class="item-link">
+							<img src="img/recommended/6.jpg" alt="6o vino recomendado"/>
+							<p>Ruca Malen<br/>
+								Malbec 2010</p>
+						</div>
+					</a>
+					<a href="#" class="add-basket">Añadir a la cesta</a>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">	
+		<div id="footer-top" class="col-12">
+			<div class="grid">
+				<div class="footerInf col-8">
+					<p>Tuvino le recuerda que <b>no está permitida la venta de bebidas alcohólicas a 
+						menores de 18 años</b> y le recomienda <b>consumirlas con moderación</b>
+					</p>
+				</div>
+				<div class="footerInf2 col-4">
+					<a><span><b>Mapa web</b></span></a>
+					<span> <b>|</b> </span>
+					<i class="fa fa-facebook-square"></i> 
+					<i class="fa fa-twitter-square"></i> 
+					<i class="fa fa-google-plus-square"></i>
+				</div>
+			</div>
+		</div>
+		<div id="footer-bottom" class="col-12">
+			<div class="grid">
+				<div class="footerInf col-6">
+					<p>Copyright © 2015 Tuvino. <a><b>Aviso legal</b></a> - <a><b>Política de privacidad</b></a></p>
+				</div>
+				<div class="footerInf2 col-6">
+					<p>Ctra. Colmenar Viejo, Km. 12,800 - 28049 Madrid - <a><b>info@tuvino.com</b></a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+  </body>
+</html>

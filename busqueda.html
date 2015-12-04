@@ -1,0 +1,242 @@
+<!--
+    Autor=Miguel Paraiso Martin
+    Fecha=10-nov-2015
+    Licencia=GPL v3
+    Version=1.0
+    Descripcion=Página de búsqueda de la tienda online "Tuvino"
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Búsqueda de vinos - Tuvino</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/jssor.slider.min.js"></script>
+	<script type="text/javascript" src="js/menu.js"></script>
+	<script type="text/javascript" src="js/slider.js"></script>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/busqueda.css">
+	<link rel="stylesheet" href="css/menu.css">
+	<link rel="stylesheet" href="css/slider.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+  </head>
+  <body>
+	<div id="header" class="col-12">
+		<div class="grid">
+			<div id="logo" class="col-4">
+				<h1><a href="index.html"><img src="img/logo.png" alt="Logo Tuvino"/></a></h1>
+			</div>
+			<div id="search" class="col-4">
+				<input type="text" class="search-input" name="buscador" autocomplete="off" placeholder="Buscar...">
+				<button type="submit" class="fa fa-search" title="Buscar" alt="Buscar"></button>
+			</div>
+			<div id="header-links" class="col-4">
+				<div class="top-links col-12">
+					<a href="#">Español - ES</a><span> | </span><a href="#">Contacto</a><span> | </span><a href="#">Ayuda</a>
+				</div>
+				<div class="bottom-links col-12">
+					<div class="shopping-cart">
+						<a href="#"><i class="fa fa-shopping-cart"></i> <b>Cesta</b></a>
+					</div>				
+					<div class="account">
+						<a href="#"><i class="fa fa-user"></i> <b>Mi cuenta</b></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="menu">
+			<ul>
+				<li><a href="index.html"><span>Home</span></a></li>
+				<li class="active has-sub"><a href="busqueda.html"><span>Vinos </span></a>
+					<ul>
+						<li><a href="busqueda.html"><span>Tinto</span></a></li>
+						<li><a href="busqueda.html"><span>Blanco</span></a></li>
+						<li><a href="busqueda.html"><span>Rosados</span></a></li>
+						<li><a href="busqueda.html"><span>Otros</span></a></li>
+					</ul>
+				</li>
+				<li><a href="#"><span>Accesorios</span></a></li>
+				<li><a href="#"><span>Cursos de cata</span></a></li>
+				<li><a href="#"><span>Novedades</span></a></li>
+				<li class="last"><a href="#"><span>Ofertas</span></a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="main">
+		<div id="mapa-web">
+			<div class="grid2">
+				<span><a href="index.html">Inicio</a> - Vinos</span>
+			</div>
+		</div>
+		<div class="grid">
+			<div class="filters-mobile"><a href="#">Filtros</a></div>
+			<div id="filters" class="col-3">
+				<div class="filter">
+					<p class="filter-title">Denominación / País</p>
+					<a><p class="filter-item-active">España (13)</p></a>
+					<a><p>Rioja (2)</p></a>
+					<a><p>Ribera del Duero (4)</p></a>
+					<a><p>Toro (1)</p></a>
+					<a><p>Rueda (0)</p></a>
+					<div class="filter-separator"></div>
+					<a><p>> Todas las D.O. de España</p></a>
+				</div>
+				<div class="filter">
+					<p class="filter-title">Uvas</p>
+					<a><p>Cabernet Sauvignon (2)</p></a>
+					<a><p>Tempranillo (2)</p></a>
+					<a><p>Merlot (1)</p></a>
+					<a><p>Syrah (3)</p></a>
+					<a><p>Garnacha (4)</p></a>
+					<div class="filter-separator"></div>
+					<a><p>> Más uvas</p></a>
+				</div>
+				<div class="filter">
+					<p class="filter-title">Añada</p>
+					<a><p>2013 (2)</p></a>
+					<a><p>2012 (3)</p></a>
+					<a><p>2011 (1)</p></a>
+					<a><p>2010 (3)</p></a>
+					<a><p>2009 (2)</p></a>
+					<div class="filter-separator"></div>
+					<a><p>> Más añadas</p></a>
+				</div>
+				<div class="filter">
+					<p class="filter-title">Botella / Capacidad</p>
+					<a><p class="filter-item-active">0,50 L (1)</p></a>
+					<a><p>0,75 L (9)</p></a>
+					<a><p>1 L (1)</p></a>
+					<a><p>1,5 L (2)</p></a>
+					<a><p>3 L (0)</p></a>
+				</div>
+			</div>
+			<div id="search-items" class="col-9">
+				<div class="search-pages">
+					<span>Página:</span>
+					<div class="page-num page-num-selected"><a href="#">1</a></div>
+					<div class="page-num"><a href="#">2</a></div>
+					<div class="page-num"><a href="#">3</a></div>
+					<div class="page-num"><a href="#">4</a></div>
+					<div class="page-num page-num-last"><a href="#">5</a></div>
+					<span>Mostrar:</span>
+					<input type="number" name="items-num" value="3" min="1" max="20">
+					<span>Ordenar por:</span>
+					<select>
+						<option value="relevancia">Relevancia</option>
+						<option value="novedades">Novedades</option>
+						<option value="precio">Precio</option>
+						<option value="valoracion">Valoración</option>
+					</select>
+					<a class="arrow"><i class="fa fa-arrow-down"></i></a>
+				</div>
+				<div class="search-item">
+					<div class="search-item-img col-3">
+						<img src="img/recommended/3.jpg" alt="Botella Samitier Roble 2012"/>
+					</div>
+					<div class="search-item-content col-6">
+						<h3>Samitier Roble 2012</h3>
+						<p class="tags">Garnacha, D.O. Calatayud<p>
+						<p>Moderno y fácil de beber. De esos vinos garnacha que se muestra más frutal (grosella, mora) que mineral, 
+							haciéndolo más goloso y donde el corto periodo de barrica (3 meses) ayuda a ensamblarlo pero sin restar 
+							la jovialidad y frescura de un vino con poca crianza. Es el típico vino que gusta a la mayoría de la 
+							gente y que invita a tomar una segunda copa.
+						</p>
+					</div>
+					<div class="search-item-price col-3">
+						<p>PVP (iva incluido)</p>
+						<p><span>7,30 €</span> botella de 75 cl</p>
+						<a href="#" class="add-basket">Añadir a la cesta</a>
+					</div>
+				</div>
+				<div class="search-separator col-12"></div>
+				<div class="search-item">
+					<div class="search-item-img col-3">
+						<img src="img/recommended/5.jpg" alt="Botella Samitier Roble 2012"/>
+					</div>
+					<div class="search-item-content col-6">
+						<h3>Beso de Vino Selección 2011</h3>
+						<p class="tags">Garnacha, Syrah, D.O. Cariñena<p>
+						<p>Color rojo picota de capa media. En nariz aparecen una notas tostadas acompañadas con frutas rojas, notas 
+							herbáceas y un punto lácteo. En boca tiene una buena acidez en la que destaca la fruta, con los tostados 
+							justos y un punto de tabaco.
+						</p>
+					</div>
+					<div class="search-item-price col-3">
+						<p>PVP (iva incluido)</p>
+						<p><span>5,15 €</span> botella de 75 cl</p>
+						<a href="#" class="add-basket">Añadir a la cesta</a>
+					</div>
+				</div>
+				<div class="search-separator col-12"></div>
+				<div class="search-item">
+					<div class="search-item-img col-3">
+						<img src="img/best-selling/1.jpg" alt="Botella Samitier Roble 2012"/>
+					</div>
+					<div class="search-item-content col-6">
+						<h3>Tierras de Cair Reserva 2009</h3>
+						<p class="tags">Tempranillo, D.O. Ribera del Duero<p>
+						<p>100% tinto fino, D.O. de Ribera del Duero. Es el vino top, el de lo galones, la estrella de la bodega, de 
+							escasa producción, y es un señor Ribera del Duero en toda regla. Equilibrado, maduro y sedoso. Te traslada 
+							en cada trago al suelo del que nacen las uvas con las que se elabora: uvas nacidas de cepas de más de 60 años, 
+							de escaso rendimiento y a gran altitud.
+						</p>
+					</div>
+					<div class="search-item-price col-3">
+						<p>PVP (iva incluido)</p>
+						<p><span>33,90 €</span> botella de 75 cl</p>
+						<a href="#" class="add-basket">Añadir a la cesta</a>
+					</div>
+				</div>
+				<div class="search-pages">
+					<span>Página:</span>
+					<div class="page-num page-num-selected"><a href="#">1</a></div>
+					<div class="page-num"><a href="#">2</a></div>
+					<div class="page-num"><a href="#">3</a></div>
+					<div class="page-num"><a href="#">4</a></div>
+					<div class="page-num page-num-last"><a href="#">5</a></div>
+					<span>Mostrar:</span>
+					<input type="number" name="items-num" value="3" min="1" max="20">
+					<span>Ordenar por:</span>
+					<select>
+						<option value="relevancia">Relevancia</option>
+						<option value="novedades">Novedades</option>
+						<option value="precio">Precio</option>
+						<option value="valoracion">Valoración</option>
+					</select>
+					<a class="arrow"><i class="fa fa-arrow-down"></i></a>
+				</div>
+				<div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">	
+		<div id="footer-top" class="col-12">
+			<div class="grid">
+				<div class="footerInf col-8">
+					<p>Tuvino le recuerda que <b>no está permitida la venta de bebidas alcohólicas a 
+						menores de 18 años</b> y le recomienda <b>consumirlas con moderación</b>
+					</p>
+				</div>
+				<div class="footerInf2 col-4">
+					<a><span><b>Mapa web</b></span></a>
+					<span> <b>|</b> </span>
+					<i class="fa fa-facebook-square"></i> 
+					<i class="fa fa-twitter-square"></i> 
+					<i class="fa fa-google-plus-square"></i>
+				</div>
+			</div>
+		</div>
+		<div id="footer-bottom" class="col-12">
+			<div class="grid">
+				<div class="footerInf col-6">
+					<p>Copyright © 2015 Tuvino. <a><b>Aviso legal</b></a> - <a><b>Política de privacidad</b></a></p>
+				</div>
+				<div class="footerInf2 col-6">
+					<p>Ctra. Colmenar Viejo, Km. 12,800 - 28049 Madrid - <a><b>info@tuvino.com</b></a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+  </body>
+</html>
