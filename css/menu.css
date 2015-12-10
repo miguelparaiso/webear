@@ -31,13 +31,13 @@
   height: 43px;
   z-index: 999;
   font-family: 'Open Sans', Helvetica, sans-serif;
-  background: #b90000;
-  background: -moz-linear-gradient(top, #CD0000 0%, #940000 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #CD0000), color-stop(100%, #940000));
-  background: -webkit-linear-gradient(top, #CD0000 0%, #940000 100%);
-  background: -o-linear-gradient(top, #CD0000 0%, #940000 100%);
-  background: -ms-linear-gradient(top, #CD0000 0%, #940000 100%);
-  background: linear-gradient(to bottom, #CD0000 0%, #940000 100%);
+  background: #0083bb;
+  background: -moz-linear-gradient(top, #00B3FF 0%, #006894 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #00B3FF), color-stop(100%, #006894));
+  background: -webkit-linear-gradient(top, #00B3FF 0%, #006894 100%);
+  background: -o-linear-gradient(top, #00B3FF 0%, #006894 100%);
+  background: -ms-linear-gradient(top, #00B3FF 0%, #006894 100%);
+  background: linear-gradient(to bottom, #00B3FF 0%, #006894 100%);
 }
 #menu > ul {
   width: 960px;
@@ -51,7 +51,7 @@
 #menu > ul > li {
   float: left;
   display: inline-block;
-  background: #464646;
+  background: #f7f7f7;
 }
 #menu.align-center > ul {
   float: none;
@@ -69,7 +69,7 @@
   text-decoration: none;
   font-size: 13px;
   font-weight: 700;
-  color: #f7f7f7;
+  color: #464646;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -233,7 +233,7 @@
   }
   #menu > ul {
     width: 100%;
-    background: #b90000;
+    background: #0083bb;
     left: 0;
   }
   #menu > ul > li > a {
@@ -253,12 +253,12 @@
 
 @media all and (max-width: 768px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
   #menu {
-    background: #b90000;
+    background: #0083bb;
   }
   #menu > ul {
     display: none;
     width: 100%;
-    background: #b90000;
+    background: #0083bb;
     left: 0;
     top: -1px;
   }
