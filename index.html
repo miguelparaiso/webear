@@ -15,6 +15,7 @@
 	<script type="text/javascript" src="js/jssor.slider.min.js"></script>
 	<script type="text/javascript" src="js/menu.js"></script>
 	<script type="text/javascript" src="js/slider.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/index.css">
 	<link rel="stylesheet" href="css/menu.css">
@@ -22,7 +23,7 @@
 	<link rel="stylesheet" href="css/font-awesome.min.css">
   </head>
   <body>
-	<div id="header" class="col-12">
+	<header class="col-12">
 		<div class="grid">
 			<div id="logo" class="col-4">
 				<h1><a href="index.html"><img src="img/logo.png" alt="Logo Webear"/></a></h1>
@@ -41,28 +42,27 @@
 				</div>
 			</div>
 		</div>
-		<div id="menu">
-			<ul>
-				<li><a href="index.html"><span>Home</span></a></li>
-				<li class="active has-sub"><a href="busqueda.html"><span>Servicios </span></a>
-					<ul>
-						<li><a href="busqueda.html"><span>Tinto</span></a></li>
-						<li><a href="busqueda.html"><span>Blanco</span></a></li>
-						<li><a href="busqueda.html"><span>Rosados</span></a></li>
-						<li><a href="busqueda.html"><span>Otros</span></a></li>
-					</ul>
-				</li>
-				<li><a href="#"><span>Proyectos</span></a></li>
-				<li><a href="#"><span>Contacto</span></a></li>
-				<li><a href="#"><span>Novedades</span></a></li>
-				<li class="last"><a href="#"><span>Ofertas</span></a></li>
-			</ul>
-		</div>
-	</div>
-	<div id="main">
-		<div id="slider-title" class="grid">
+	</header>
+	<nav id="menu">
+		<ul>
+			<li class="active"><a href="index.html"><span>Home</span></a></li>
+			<li class="has-sub"><a href="#"><span>Servicios </span></a>
+				<ul>
+					<li><a href="#"><span>Tinto</span></a></li>
+					<li><a href="#"><span>Blanco</span></a></li>
+					<li><a href="#"><span>Rosados</span></a></li>
+					<li><a href="#"><span>Otros</span></a></li>
+				</ul>
+			</li>
+			<li><a href="#"><span>Proyectos</span></a></li>
+			<li><a href="#"><span>Contacto</span></a></li>
+			<li><a href="#"><span>Novedades</span></a></li>
+		</ul>
+	</nav>
+	<section id="home">
+		<!--<div id="slider-title" class="grid">
 			<h2>Diseño y programación web</h2>
-		</div>
+		</div>-->
 		<!-- SLIDER -->
 		<div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1300px !important; 
 									height: 350px; overflow: hidden; visibility: hidden;">
@@ -103,7 +103,30 @@
 	        jssor_1_slider_init();
 	    </script>
 		<!-- Contenido web -->
-	<div id="footer">	
+		<article id="about">
+			<div id="about-logo" class="col-6">
+			</div>
+			<div id="about-inf" class="col-6">
+				<h2>Conoce a Webear</h2>
+				<p>
+					Sabemos que son muchos los caminos que pueden llevar al éxito tu negocio, pero desde el primer momento 
+					hemos tenido claro cual tenía que ser nuestra fórmula, y por tanto, la fuerza motriz de nuestro trabajo:
+				</p>
+				<p class="big-text">
+					"Facilitamos el día a día de personas y empresas mediante la creación de tecnología web y móvil."
+				</p>
+				<p>
+					<b>
+						¿Quieres ver como trabajamos?
+					</b>
+				</p>
+				<p>
+					Echa un vistazo a nuestros últimos proyectos y contacta con nosotros para saber cómo podemos ayudarte.
+				</p>
+			</div>
+		</article>
+	</section>
+	<footer>	
 		<div id="footer-top" class="col-12">
 			<div class="grid">
 				<div class="footerInf col-8">
@@ -130,6 +153,6 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</footer>
   </body>
 </html>
