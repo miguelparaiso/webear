@@ -28,6 +28,9 @@ function habilitar() {
     }
 
 }
+/**
+ * funcion que habilita o deshabilita el boton de submit segun se pulse en el campo checkbox condiciones
+ */
 function habilitarchk() {
     document.getElementById("submit").disabled = (document.getElementById("conditions").checked) ? false : true;
 
