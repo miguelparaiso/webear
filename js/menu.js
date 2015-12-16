@@ -4,12 +4,13 @@ $('#menu').prepend('<div id="menu-button">Menu</div>');
 	$('#menu #menu-button').on('click', function(){
 		var menu = $(this).next('ul');
 		if (menu.hasClass('open')) {
-			menu.slideUp('fast');
-			menu.removeClass('open');	
+			menu.removeClass('open');
+			menu.addClass('close');
 		}
 		else {
-			menu.slideDown('fast');
-			menu.addClass('open');	
+			menu.removeClass('close');
+			menu.addClass('open');
+			
 		}
 	});
 });

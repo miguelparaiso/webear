@@ -29,7 +29,7 @@
 #menu {
   width: auto;
   height: 50px;
-  z-index: 999;
+  z-index: 998;
   font-family: 'Open Sans', Helvetica, sans-serif;
   background: #006e9d;
   background: -moz-linear-gradient(top, #0090CE 0%, #005173 100%);
@@ -44,6 +44,13 @@
   box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.05);
   margin: 0 auto;
   left: 5px;
+}
+#menu > ul.open {
+  display: block;
+  overflow: hidden;
+}
+#menu > ul.close {
+  overflow: hidden;
 }
 #menu.align-right > ul > li {
   float: right;
@@ -238,7 +245,7 @@
 
 @media only screen and (min-width: 769px) and (max-width: 1050px) {
   #menu {
-    height: 37px;
+    height: 39px;
   }
   #menu > ul {
     width: 100%;
@@ -263,6 +270,7 @@
 @media all and (max-width: 768px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
   #menu {
     background: #006e9d;
+    height: 45px;
   }
   #menu > ul {
     display: none;

@@ -33,7 +33,8 @@
 	font-weight: 300;
 }
 #home #about #about-logo {
-	background: url(../img/logo.png) no-repeat;
+	background: url(../img/logo-icon.png) no-repeat;
+	background-size: 30%;
 	background-position: 70% 50%;
 }
 #home #about #about-inf h2 {
@@ -59,6 +60,8 @@
 #home #about #about-inf b {
 	font-weight: 600;
 }
+
+/* estilos slider empresas */
 
 @media only screen and (max-width: 1050px) {
 	#home #slider-title{
