@@ -65,7 +65,7 @@ function chk(regexp, input) {
             !chk(regexString, apellido1) &
             !chk(regexString, apellido2) &
             !chk(regexEmail, email) &
-            !chk(regexTelefonoFijo, telefonoFijo) &
+            !chk(regexTelefonoFijo, telefonoFijo) &&
             !chk(regexTelefonoMovil, telefonoMovil)) {
             return true;
         }
