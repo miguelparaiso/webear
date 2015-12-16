@@ -1,0 +1,20 @@
+#formulario {
+    border: 1px black dashed;
+    background-color: #c2d6d6;
+    margin: 0 auto;
+    width: 33%;
+}
+
+#form input {
+    padding: 10px;
+    border: solid 1px #dcdcdc;
+    transition: box-shadow 0.3s, border 0.3s;
+}
+form label {
+    display: inline-block;
+    width: 150px;
+}
+
+form input {
+    display: inline-block;
+}

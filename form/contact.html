@@ -25,38 +25,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
-    <script type="text/javascript" src="contact.js"></script>
-    <style>
-    </style>
+    <title>Formulario</title>
+
+    <!--ESTILO DEL FORMULARIO CSS -->
+    <link rel="stylesheet" href="form.css">
 </head>
 <body>
-<form onsubmit="return validar()" id="form">
-    <label for="name">Nombre *<input placeholder="Solo letras" type="text" id="name" oninput="habilitar()"
-                                     pattern="^([A-Za-z_]{1,30})" title="Se requiere un nombre"></label>
-    <label for="surname1">Apellido 1 *<input placeholder="Solo letras" type="text" id="surname1" oninput="habilitar()"
-                                             pattern="^([A-Za-z_]{1,30})" title="Se requiere un apellido"></label>
-    <label for="surname2">Apellido 2 *<input placeholder="Solo letras" type="text" id="surname2" oninput="habilitar()"
-                                             pattern="^([A-Za-z_]{1,30})" title="Se requiere un apellido"></label><br>
-    <label for="email">Email *<input placeholder="webear@bear.com" type="text" id="email" oninput="habilitar()"
-                                     pattern="/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i"
-                                     title="Se requiere su email"></label><br>
-    <label for="phone">Telefono fijo<input placeholder="Telefono fijo" type="number" maxlength="9" id="phone"
-                                           oninput="habilitar()"
-                                           title="Numero 9 digitos maximo"></label><br>
-    <label for="mobil">Movil *<input placeholder="Telefono movil" type="number" id="mobil" maxlength="9"
-                                     oninput="habilitar()"
-                                     title="Numero de 9 digitos maximo"></label><br>></label>
-    <br>
-    <textarea id="textarea" cols="50" rows="10" placeholder="Escriba sus sugerencias por favor..."></textarea><br>
-    <label for="options"></label><select id="options">
-    <option>Opcion 1</option>
-    <option>Opcion 2</option>
-    <option>Opcion 3</option>
-</select>
-    <label for="conditions">Aceptar Terminos y condiciones<input type="checkbox" id="conditions" disabled></label>
-    <input type="submit" value="Send" disabled>
-    <input type="reset" value="Delete">
-</form>
+<div id="formulario">
+    <form onsubmit="return validar()" id="form">
+        <label for="name">Nombre *</label>
+        <input placeholder="Solo letras" type="text" id="name" oninput="habilitar()"
+               pattern="^([A-Za-z_]{1,30})" title="Se requiere un nombre" required><br>
+
+        <label for="surname1">Apellido 1 *</label>
+        <input placeholder="Solo letras" type="text" id="surname1" oninput="habilitar()"
+               pattern="^([A-Za-z_]{1,30})" title="Se requiere un apellido" required><br>
+
+        <label for="surname2">Apellido 2 *</label>
+        <input placeholder="Solo letras" type="text" id="surname2" oninput="habilitar()"
+               pattern="^([A-Za-z_]{1,30})" title="Se requiere un apellido" required><br>
+        <label for="email">Email *</label>
+        <input placeholder="webear@bear.com" type="text" id="email" oninput="habilitar()"
+               pattern="^\w+@\w+?\.*\w{2,3}$"
+               title="Se requiere su email" required><br>
+        <label for="phone">Telefono fijo</label>
+        <input placeholder="Telefono fijo" type="number" maxlength="9" id="phone"
+               oninput="habilitar()"
+               title="Numero 9 digitos maximo"><br>
+        <label for="mobil">Movil * </label>
+        <input placeholder="Telefono movil" type="number" id="mobil" maxlength="9"
+               oninput="habilitar()"
+               title="Numero de 9 digitos maximo" required>
+        <br>
+    <textarea id="texto" cols="50" rows="10" placeholder="Escriba sus sugerencias por favor..."
+              oninput="habilitar()"></textarea><br>
+        <select id="options">
+            <option>Sugerencia</option>
+            <option>Incidencia leve</option>
+            <option>Incidencia grave</option>
+        </select>
+        Aceptar terminos y condiciones<input type="checkbox" id="conditions" disabled onchange="habilitarchk()"><br>
+        <input type="submit" value="Send" id="submit" disabled>
+        <input type="reset" value="Delete">
+    </form>
+</div>
+<script type="text/javascript" src="contact.js"></script>
 </body>
 </html>
