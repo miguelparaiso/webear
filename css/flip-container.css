@@ -7,7 +7,7 @@
 		transform: rotateY(180deg);
 }
 /* Para los iconos de servicios */
-i{
+.flip-container i{
 	padding-top: 20px;
 	color: #006e9d;
 }
