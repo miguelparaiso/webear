@@ -114,7 +114,6 @@ header #header-links .bottom-links .account:hover, header #header-links .bottom-
 }
 header #header-links .bottom-links a#contact-phone {
 	display: inline-block;
-    width: 32%;
 }
 header #header-links .bottom-links a#contact-phone span {
 	font-size: 25px;
