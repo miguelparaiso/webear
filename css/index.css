@@ -37,25 +37,19 @@
 	font-weight: 300;
 }
 #home #about #about-logo {
-	background: url(../img/logo-icon.png) no-repeat;
-	background-size: 30%;
-	background-position: 70% 50%;
+	background: url(../img/logo-icon-blue.png) no-repeat;
+    background-size: 75%;
+    background-position: 50% 90%;
 }
 #home #about #about-inf h2 {
 	font-weight: 500;
 	margin: 0;
 }
 #home #about #about-logo {
-	display: table-cell;
-	vertical-align: middle;
-	text-align: right;
-	padding-right: 4%;
+	float: left;
 }
 #home #about #about-inf {
-	display: table-cell;
-	vertical-align: middle;
-	text-align: left;
-	padding-right: 15%;
+	float: left;
 	color: #fff;
 }
 #home #about #about-inf .big-text {
