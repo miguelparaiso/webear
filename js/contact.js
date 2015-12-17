@@ -63,7 +63,7 @@ function chk(regexp, input) {
         /************ expresion regular telefono movil ************/
         var regexTelefonoMovil = /^[6]\d{8}$/;
 
-        /************ Pongo solo & para que compruebe todos los campos del if ************/
+        /************ Pongo solo & para que compruebe que todos los campos del if son true ************/
         if (!chk(regexString, nombre) &
             !chk(regexString, apellido1) &
             !chk(regexString, apellido2) &
