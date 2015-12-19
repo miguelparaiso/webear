@@ -28,40 +28,38 @@
     <title>Formulario</title>
 
     <!--ESTILO DEL FORMULARIO CSS -->
-    <link rel="stylesheet" href="../css/form.css">
+    <link rel="stylesheet" href="form.css">
 </head>
 <body>
 <div id="formulario">
-    <form onsubmit="return validar()" id="form" action="exito.html">
+    <form onsubmit="return validar()" id="form">
         <label for="name">Nombre *</label>
         <input placeholder="Solo letras" type="text" id="name" oninput="habilitar()"
-               pattern="^([A-Za-z ]{1,30})" title="Se requiere un nombre" required><br>
+               pattern="^([A-Za-z_]{1,30})" title="Se requiere un nombre" required><br>
 
         <label for="surname1">Apellido 1 *</label>
         <input placeholder="Solo letras" type="text" id="surname1" oninput="habilitar()"
-               pattern="^([A-Za-z ]{1,30})" title="Se requiere un apellido" required><br>
+               pattern="^([A-Za-z_]{1,30})" title="Se requiere un apellido" required><br>
 
         <label for="surname2">Apellido 2 *</label>
         <input placeholder="Solo letras" type="text" id="surname2" oninput="habilitar()"
-               pattern="^([A-Za-z ]{1,30})" title="Se requiere un apellido" required><br>
+               pattern="^([A-Za-z_]{1,30})" title="Se requiere un apellido" required><br>
         <label for="email">Email *</label>
         <input placeholder="webear@bear.com" type="text" id="email" oninput="habilitar()"
                pattern="^\w+@\w+?\.*\w{2,3}$"
                title="Se requiere su email" required><br>
         <label for="phone">Telefono fijo</label>
-        <input placeholder="Telefono fijo" type="text"  id="phone"
+        <input placeholder="Telefono fijo" type="number" maxlength="9" id="phone"
                oninput="habilitar()"
-               title="Numero 9 digitos maximo que empiece por 9"><br>
+               title="Numero 9 digitos maximo"><br>
         <label for="mobil">Movil * </label>
-        <input placeholder="Telefono movil" type="text" id="mobil"
+        <input placeholder="Telefono movil" type="number" id="mobil" maxlength="9"
                oninput="habilitar()"
-               title="Numero de 9 digitos maximo que empiece por 6" required>
+               title="Numero de 9 digitos maximo" required>
         <br>
     <textarea id="texto" cols="50" rows="10" placeholder="Escriba sus sugerencias por favor..."
               oninput="habilitar()"></textarea><br>
-        <label for="options">Seleccione una opcion de contacto</label>
         <select id="options">
-            <option selected>Ninguna</option>
             <option>Sugerencia</option>
             <option>Incidencia leve</option>
             <option>Incidencia grave</option>
@@ -71,6 +69,6 @@
         <input type="reset" value="Delete">
     </form>
 </div>
-<script type="text/javascript" src="../js/contact.js"></script>
+<script type="text/javascript" src="contact.js"></script>
 </body>
 </html>

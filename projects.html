@@ -1,0 +1,147 @@
+<!--
+    Autor=Miguel Paraiso Martin
+    Fecha=10-nov-2015
+    Licencia=GPL v3
+    Version=1.0
+    Descripcion=Galería de la tienda online "Webear"
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Página principal - Webear</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<script type="text/javascript" src="js/jquery-2.0.2.min.js"></script>
+	<script type="text/javascript" src="js/menu.js"></script>
+    <script type="text/javascript" src="js/least.min.js"></script>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/menu.css">
+	<link rel="stylesheet" href="css/social-sidebar.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/least.min.css" />
+  </head>
+  <body>
+	<header class="col-12">
+		<div class="grid">
+			<div id="logo" class="col-5">
+				<h1><a href="index.html"><img src="img/logo2.png" alt="Logo Webear"/></a></h1>
+			</div>
+			<div id="header-links" class="col-7">
+				<div class="top-links col-12">
+					<a href="#">Español - ES</a><span> | </span><a href="#">Ayuda</a>
+				</div>
+				<div class="bottom-links col-12">
+					<a href="#" id="contact-phone">
+						<span><i class="fa fa-phone"></i> <b>91 416 87 69</b></span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<nav id="menu">
+		<ul>
+			<li><a href="index.html"><span>Home</span></a></li>
+			<li class="has-sub"><a href="#"><span>Servicios </span></a>
+				<ul>
+					<li><a href="#"><span>Tinto</span></a></li>
+					<li><a href="#"><span>Blanco</span></a></li>
+					<li><a href="#"><span>Rosados</span></a></li>
+					<li><a href="#"><span>Otros</span></a></li>
+				</ul>
+			</li>
+			<li class="active"><a href="projects.html"><span>Proyectos</span></a></li>
+			<li><a href="#"><span>Contacto</span></a></li>
+			<li><a href="#"><span>Novedades</span></a></li>
+		</ul>
+	</nav>
+	<aside id="sticky-social">
+		<ul>
+			<li><a href="#" class="facebook" target="_blank"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
+			<li><a href="#" class="twitter" target="_blank"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
+			<li><a href="#" class="gplus" target="_blank"><i class="fa fa-google-plus"></i><span>Google+</span></a></li>
+			<li><a href="#" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i><span>LinkedIn</span></a></li>
+			<li><a href="#" class="instagram" target="_blank"><i class="fa fa-instagram"></i><span>Instagram</span></a></li>
+			<li><a href="#" class="pinterest" target="_blank"><i class="fa fa-pinterest"></i><span>Pinterest</span></a></li>
+		</ul>
+	</aside>
+	<section id="gallery">
+		<!-- Projects Gallery -->
+        <article id="least">
+            <!-- Projects Gallery: Fullscreen Preview -->
+            <div class="least-preview"></div>
+            <!-- Projects Gallery: Thumbnails -->
+            <ul class="least-gallery">
+                <li>
+                    <a href="img/big/01.jpg" title="Skateboard" data-subtitle="View Picture" data-caption="<strong>Bold text</strong> normal caption text">
+                        <img src="img/thumbnails/01.jpg" alt="Alt Image Text" />
+                    </a>
+                </li>
+                <li>
+                    <a href="img/big/02.jpg" title="Train Rails" data-subtitle="View Picture" data-caption="Now it's possibe to add an URL-Link into caption text - <a href='http://www.google.com' target='_blank'>GOOGLE</a>">
+                        <img src="img/thumbnails/02.jpg" alt="Alt Image Text" />
+                    </a>
+                </li>
+                <li>
+                    <a href="img/big/03.jpg" title="Apple" data-subtitle="View Picture">
+                        <img src="img/thumbnails/03.jpg" alt="Alt Image Text" />
+                    </a>
+                </li>
+                <li>
+                    <a href="img/big/04.jpg" title="Road Trip" data-subtitle="View Picture">
+                        <img src="img/thumbnails/04.jpg" alt="Alt Image Text" />
+                    </a>
+                </li>
+                <li>
+                    <a href="img/big/05.jpg" title="Desert" data-subtitle="View Picture">
+                        <img src="img/thumbnails/05.jpg" alt="Alt Image Text" />
+                    </a>
+                </li>
+                <li>
+                    <a href="img/big/06.jpg" title="Tree" data-subtitle="View Picture">
+                        <img src="img/thumbnails/06.jpg" alt="Alt Image Text" />
+                    </a>
+                </li>
+                <li>
+                    <a href="img/big/07.jpg" title="MacBook" data-subtitle="View Picture">
+                        <img src="img/thumbnails/07.jpg" alt="Alt Image Text" />
+                    </a>
+                </li>
+                <li>
+                    <a href="img/big/08.jpg" title="Clock" data-subtitle="View Picture">
+                        <img src="img/thumbnails/08.jpg" alt="Alt Image Text" />
+                    </a>
+                </li>
+                <li>
+                    <a href="img/big/09.jpg" title="iPhone" data-subtitle="View Picture">
+                        <img src="img/thumbnails/09.jpg" alt="Alt Image Text" />
+                    </a>
+                </li>
+                <li>
+                    <a href="img/big/10.jpg" title="New York" data-subtitle="View Picture">
+                        <img src="img/thumbnails/10.jpg" alt="Alt Image Text" />
+                    </a>
+                </li>
+            </ul>
+        </article>
+        <script>
+            $(document).ready(function(){
+                $('.least-gallery').least();
+            });
+        </script>
+	</section>
+	<footer>	
+		<div id="footer-bottom" class="col-12">
+			<div class="grid">
+				<div class="footerInf col-6">
+					<p>Copyright © 2015 Webear. <a><b>Aviso legal</b></a> - <a><b>Política de privacidad</b></a></p>
+				</div>
+				<div class="footerInf2 col-6">
+					<p>Ctra. Colmenar Viejo, Km. 12,800 - 28049 Madrid - <a><b>info@Webear.com</b></a></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+  </body>
+</html>
