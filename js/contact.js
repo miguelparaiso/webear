@@ -52,7 +52,11 @@ function validar() {
     var email = document.getElementById("email").value;
     var telefonoMovil = document.getElementById("mobil").value;
 
-
+    /* Opciones del select*/
+    var auxCont = document.getElementById("options");
+    var opcionSeleccionada = auxCont.selectedIndex;
+    /* Opcione seleccionada*/
+    var opcion = auxCont.options[opcionSeleccionada].text;
 
     /************ EXPRESIONES REGULARES ************/
     /************ expresion regular sting con espacio ************/
@@ -62,11 +66,53 @@ function validar() {
     /************ expresion regular telefono movil ************/
     var regexTelefonoMovil = /^[6]\d{8}$/;
     switch (true) {
-        case (!chk(regexString, nombre)): alert('Nombre erroneo' ); return false;
-        case (!chk(regexString, apellido1)): alert('Primer apellido erroneo' ); return false;
-        case (!chk(regexString, apellido2)): alert('Segundo apellido erroneo' ); return false;
-        case (!chk(regexEmail, email)): alert('Email erroneo' ); return false;
-        case (!chk(regexTelefonoMovil, telefonoMovil)): alert('Telefono movil erroneo' ); return false;
+        case (!chk(regexString, nombre)):
+            alert('Nombre erroneo');
+            return false;
+        case (!chk(regexString, apellido1)):
+            alert('Primer apellido erroneo');
+            return false;
+        case (!chk(regexString, apellido2)):
+            alert('Segundo apellido erroneo');
+            return false;
+        case (!chk(regexEmail, email)):
+            alert('Email erroneo');
+            return false;
+        case (!chk(regexTelefonoMovil, telefonoMovil)):
+            alert('Telefono movil erroneo');
+            return false;
+        case (opcion == 'Ninguna'):
+            alert('Seleccione una opcion');
+            return false;
     }
-   return true
+    return true
+}
+function seleccionaOpcion() {
+    var auxCont = document.getElementById("options");
+    var auxOpcion = document.getElementById("options2");
+    auxOpcion.disabled = false;
+    var opcionSeleccionada = auxCont.selectedIndex;
+    var opcion = auxCont.options[opcionSeleccionada].text;
+
+    var opciones = {};
+    opciones['Sugerencia'] = ['Mejoras', 'Bugs', 'Otas'];
+    opciones['Queja'] = ['Grave', 'Muy Grave', 'Extremadamente Grave'];
+    opciones['Informacion'] = ['Facturacion', 'Personal', 'Otro'];
+
+
+    while (auxOpcion.options.length) {
+        auxOpcion.remove(0);
+    }
+    if (opcion == 'Ninguna') {
+        auxOpcion.disabled = true;
+    }
+    var ciudad = opciones[opcion];
+
+
+    for (var i = 0; i < ciudad.length; i++) {
+        var aux = new Option(ciudad[i]);
+        auxOpcion.options.add(aux);
+    }
+
+
 }
