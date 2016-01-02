@@ -36,7 +36,7 @@ function habilitarchk() {
 
 }
 /**
- * Funcion que comprueba si el parametro imput introducido cumple el patron
+ * Funcion que comprueba si el parametro imput introducido cumple el parametro patron
  * @param regexp
  * @param input
  * @returns {boolean}
@@ -44,36 +44,29 @@ function habilitarchk() {
 function chk(regexp, input) {
     return (regexp.test(input));
 }
-    function validar() {
-        /************ CAMPOS A COMPROBAR ************/
-        var nombre = document.getElementById("name").value;
-        var apellido1 = document.getElementById("surname1").value;
-        var apellido2 = document.getElementById("surname2").value;
-        var email = document.getElementById("email").value;
-        var telefonoFijo = document.getElementById("phone").value;
-        var telefonoMovil = document.getElementById("mobil").value;
+function validar() {
+    /************ CAMPOS A COMPROBAR ************/
+    var nombre = document.getElementById("name").value;
+    var apellido1 = document.getElementById("surname1").value;
+    var apellido2 = document.getElementById("surname2").value;
+    var email = document.getElementById("email").value;
+    var telefonoMovil = document.getElementById("mobil").value;
 
-        /************ EXPRESIONES REGULARES ************/
-        /************ expresion regular sting con espacio ************/
-        var regexString = /^([a-z ]{1,30})/i;
-        /************ expresion regular email ************/
-        var regexEmail = /^\w+@\w+?\.*\w{2,3}$/;
-        /************ expresion regular telefono fijo ************/
-        var regexTelefonoFijo = /^[9]\d{8}$/;
-        /************ expresion regular telefono movil ************/
-        var regexTelefonoMovil = /^[6]\d{8}$/;
 
-        /************ Pongo solo & para que compruebe que todos los campos del if son true ************/
-        if (!chk(regexString, nombre) &
-            !chk(regexString, apellido1) &
-            !chk(regexString, apellido2) &
-            !chk(regexEmail, email) &
-            !chk(regexTelefonoFijo, telefonoFijo) &&
-            !chk(regexTelefonoMovil, telefonoMovil)) {
-            return true;
-        }
-        else {
-            alert('Error al enviar, el formulario compruebe los campos');
-            return false;
-        }
+
+    /************ EXPRESIONES REGULARES ************/
+    /************ expresion regular sting con espacio ************/
+    var regexString = /^([a-z ]{1,30})/i;
+    /************ expresion regular email ************/
+    var regexEmail = /^\w+@\w+?\.*\w{2,3}$/;
+    /************ expresion regular telefono movil ************/
+    var regexTelefonoMovil = /^[6]\d{8}$/;
+    switch (true) {
+        case (!chk(regexString, nombre)): alert('Nombre erroneo' ); return false;
+        case (!chk(regexString, apellido1)): alert('Primer apellido erroneo' ); return false;
+        case (!chk(regexString, apellido2)): alert('Segundo apellido erroneo' ); return false;
+        case (!chk(regexEmail, email)): alert('Email erroneo' ); return false;
+        case (!chk(regexTelefonoMovil, telefonoMovil)): alert('Telefono movil erroneo' ); return false;
     }
+   return true
+}

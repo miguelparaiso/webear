@@ -58,77 +58,95 @@
 <div class="grid">
 
     <div id="formulario">
-        <div id="header-form"><h2>Formulario de registro</h2></div>
+        <div id="header-form"><h2>Formulario de registro </h2><p class="required_notification"> Los campos indicados con * son obligatorios</p></div>
 
         <form onsubmit="return validar()" id="form" action="exito.html">
             <fieldset>
-                <section>
-                    <label for="name">Nombre *</label>
-                    <input placeholder="Nombre" type="text" id="name" oninput="habilitar()"
-                           pattern="^([A-Za-z ]{1,30})" title="Se requiere un nombre" required><br>
-                </section>
-                <section>
-                    <label for="surname1"></label>
-                    <input placeholder="Primer apellido" type="text" id="surname1" oninput="habilitar()"
-                           pattern="^([A-Za-z ]{1,30})" title="Se requiere un apellido" required><br>
-                </section>
-                <section>
-                    <label for="surname2"></label>
-                    <input placeholder="Segundo apllido" type="text" id="surname2" oninput="habilitar()"
-                           pattern="^([A-Za-z ]{1,30})" title="Se requiere un apellido" required><br>
-                </section>
-                <section>
-                    <label for="email"></label>
-                    <input placeholder="Email" type="text" id="email" oninput="habilitar()"
-                           pattern="^\w+@\w+?\.*\w{2,3}$"
-                           title="Se requiere su email" required><br>
-                </section>
-                <section>
-                    <label for="phone"></label>
-                    <input placeholder="Telefono fijo" type="text" id="phone"
-                           oninput="habilitar()"
-                           title="Numero 9 digitos maximo que empiece por 9"><br>
-                </section>
-                <section>
-                    <label for="mobil"></label>
-                    <input placeholder="Telefono movil" type="text" id="mobil"
-                           oninput="habilitar()"
-                           title="Numero de 9 digitos maximo que empiece por 6" required>
-                    <br>
-                </section>
-                <section>
-    <textarea id="texto" cols="50" rows="10" placeholder="Escriba sus sugerencias por favor..."
-              oninput="habilitar()"></textarea><br>
-                </section>
-                <!-- dos listas desplegables, 1º tipo de consulta
-                sugerencia queja informacion,
-                2 deshabilitada y vacia (sobre que asunto) deshabilitado y vacio
-                 si elegie sugerencia en el 2º se pondran sugerencias sugerencias...-->
-                <label for="options">Seleccione una opcion de contacto</label>
-                <select id="options">
-                    <option selected>Ninguna</option>
-                    <option>Sugerencia</option>
-                    <option>Incidencia leve</option>
-                    <option>Incidencia grave</option>
-                </select>
-                <label for="options2">Sobre que asunto</label>
-                <select id="options2" disabled>
-                    <option selected>-------------</option>
-                    <option></option>
-                    <option></option>
-                    <option></option>
-                </select>
 
-                <div id="footer-form">
-                    <label for="conditions"> Aceptar terminos y condiciones</label><input type="checkbox"
-                                                                                          id="conditions" disabled
-                                                                                          onchange="habilitarchk()"><br>
-                    <input type="submit" value="Send" id="submit" disabled class="boton">
-                    <input type="reset" value="Delete" class="boton">
-                </div>
+                <ul>
+                    <li>
+                        <label for="name">Nombre </label>
+                        <input placeholder="Nombre" type="text" id="name" oninput="habilitar()"
+                               pattern="^([A-Za-z ]{1,30})" title="Se requiere un nombre" required>
+                    </li>
+                    <li>
+                        <label for="surname1">Apellido 1</label>
+                        <input placeholder="Primer apellido" type="text" id="surname1" oninput="habilitar()"
+                               pattern="^([A-Za-z ]{1,30})" title="Se requiere un apellido" required>
+
+                    </li>
+                    <li>
+                        <label for="surname2">Apellido 2</label>
+                        <input placeholder="Segundo apllido" type="text" id="surname2" oninput="habilitar()"
+                               pattern="^([A-Za-z ]{1,30})" title="Se requiere un apellido" required>
+
+                    </li>
+                    <li>
+                        <label for="email">E-mail</label>
+                        <input placeholder="webear@bear.com" type="text" id="email" oninput="habilitar()"
+                               pattern="^\w+@\w+?\.*\w{2,3}$"
+                               title="Se requiere su email" required>
+
+                    </li>
+                    <li>
+                        <label for="phone">Teléfono Fijo </label>
+                        <input placeholder="Telefono fijo" type="text" id="phone"
+                               oninput="habilitar()"
+                               pattern="^[9]\d{8}$"
+                               title="Numero 9 digitos maximo que empiece por 9">
+
+                    </li>
+                    <li>
+                        <label for="mobil">Teléfono Móvil </label>
+                        <input placeholder="Telefono movil" type="text" id="mobil"
+                               oninput="habilitar()"
+                               pattern="^[6]\d{8}$"
+                               title="Numero de 9 digitos maximo que empiece por 6" required>
+                    </li>
+                    <li>
+               
+               
+    <textarea id="texto" cols="50" rows="10" placeholder="Escriba sus sugerencias por favor..."
+              oninput="habilitar()"></textarea>
+
+
+                        <!-- dos listas desplegables, 1º tipo de consulta
+                        sugerencia queja informacion,
+                        2 deshabilitada y vacia (sobre que asunto) deshabilitado y vacio
+                         si elegie sugerencia en el 2º se pondran sugerencias sugerencias...-->
+                    </li>
+                    <li>
+                        Seleccione una opcion de contacto
+                        <select id="options">
+                            <option selected>Ninguna</option>
+                            <option>Sugerencia</option>
+                            <option>Incidencia leve</option>
+                            <option>Incidencia grave</option>
+                        </select>
+                        Sobre que asunto
+                        <select id="options2" disabled>
+                            <option selected>-------------</option>
+                            <option></option>
+                            <option></option>
+                            <option></option>
+                        </select>
+                    </li>
+                    <li>
+
+                        <label for="conditions">Terminos y condiciones</label><input type="checkbox"
+                                                                                              id="conditions" disabled
+                                                                                              onchange="habilitarchk()">
+                    </li>
+                    <li>
+                        <input type="submit" value="Send" id="submit" disabled class="boton">
+                        <input type="reset" value="Delete" class="boton">
+                    </li>
+
+                </ul>
             </fieldset>
         </form>
     </div>
+</div>
 </div>
 <footer>
     <div id="footer-bottom" class="col-12">
