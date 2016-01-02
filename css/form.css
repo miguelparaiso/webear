@@ -65,14 +65,23 @@ body {
 
 #form input, #form textarea {
     border: 1px solid #aaa;
-    box-shadow: 0 0 3px #ccc, 0 10px 15px #eee inset;
     border-radius: 2px;
 }
 
 #form input:focus, #form textarea:focus {
     background: #fff;
     border: 1px solid #555;
-    box-shadow: 0 0 3px #aaa;
+}
+.checkbox:disabled{
+    opacity: 0.5;
+}
+.checkbox {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    margin: 10px auto;
+    background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    box-shadow: inset 0 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
 }
 /* PLACEHOLDER */
 :-moz-placeholder {
@@ -111,4 +120,27 @@ body {
     background: #fff url(../img/valid.png) no-repeat 98% center;
     box-shadow: 0 0 5px #5cd053;
     border-color: #28921f;
+}
+/* BOTONES */
+.boton {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    color: #000000;
+    background: #0090CE;
+    padding: 1vw 2vw ;
+}
+
+.boton:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #0090CE , #3498db);
+    background-image: -moz-linear-gradient(top, #0090CE , #3498db);
+    background-image: -ms-linear-gradient(top, #0090CE , #3498db);
+    background-image: -o-linear-gradient(top, #0090CE , #3498db);
+    background-image: linear-gradient(to bottom, #0090CE , #3498db);
+    text-decoration: none;
+}
+.boton:disabled{
+    color: #a7bbbb;
+    background: #bbd4d4;
 }

@@ -4,18 +4,17 @@
 
     <title>Página principal - Webear</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-2.0.2.min.js"></script>
     <script type="text/javascript" src="js/jssor.slider.min.js"></script>
     <script type="text/javascript" src="js/menu.js"></script>
     <script type="text/javascript" src="js/slider.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900"
-          rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/slider.css">
     <link rel="stylesheet" href="css/social-sidebar.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/flip-container.css">
     <!--ESTILO DEL FORMULARIO CSS -->
     <link rel="stylesheet" href="css/form.css">
     <!--JS -->
@@ -108,37 +107,30 @@
                
     <textarea id="texto" cols="50" rows="10" placeholder="Escriba sus sugerencias por favor..."
               oninput="habilitar()"></textarea>
-
-
-                        <!-- dos listas desplegables, 1º tipo de consulta
-                        sugerencia queja informacion,
-                        2 deshabilitada y vacia (sobre que asunto) deshabilitado y vacio
-                         si elegie sugerencia en el 2º se pondran sugerencias sugerencias...-->
                     </li>
                     <li>
                         Seleccione una opcion de contacto
-                        <select id="options">
-                            <option selected>Ninguna</option>
-                            <option>Sugerencia</option>
-                            <option>Incidencia leve</option>
-                            <option>Incidencia grave</option>
+                        <select required id="options" onchange="seleccionaOpcion()">
+                            <option selected value="Ninguna">Ninguna</option>
+                            <option value="Sugerencia">Sugerencia</option>
+                            <option value="Queja">Queja</option>
+                            <option value="Informacion">Informacion</option>
                         </select>
                         Sobre que asunto
                         <select id="options2" disabled>
-                            <option selected>-------------</option>
-                            <option></option>
-                            <option></option>
-                            <option></option>
+                            <option selected value="">-------------</option>
+                            <option  value=""></option>
+                            <option  value=""></option>
                         </select>
                     </li>
                     <li>
 
-                        <label for="conditions">Terminos y condiciones</label><input type="checkbox"
+                        <label for="conditions">Terminos y condiciones</label><input class="checkbox" type="checkbox"
                                                                                               id="conditions" disabled
                                                                                               onchange="habilitarchk()">
                     </li>
                     <li>
-                        <input type="submit" value="Send" id="submit" disabled class="boton">
+                        <input type="submit" value="Send" id="submit" disabled class="boton" >
                         <input type="reset" value="Delete" class="boton">
                     </li>
 
