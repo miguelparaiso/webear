@@ -1,0 +1,20 @@
+/* ESTILOS COMUNES A TODA LA PAGINA */
+
+body {
+    font: 15px/19px 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+/* Contenido */
+#main-content {
+    background-color: #006e9d;
+    color: #fff;
+}
+
+
+#main-services1, #main-services2{
+    display: flex;
+}
+
+#secundary-content{
+
+}
