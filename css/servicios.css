@@ -1,20 +1,20 @@
 /* ESTILOS COMUNES A TODA LA PAGINA */
 
-body {
-    font: 15px/19px 'Open Sans', Helvetica, Arial, sans-serif;
-}
-
 /* Contenido */
 #main-content {
     background-color: #006e9d;
     color: #fff;
 }
 
-
-#main-services1, #main-services2{
+.flex {
+    display: flex;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
     display: flex;
 }
-
-#secundary-content{
-
+.foto{
+    height: 100%;
+    width: 100%;
 }

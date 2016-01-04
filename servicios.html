@@ -3,16 +3,14 @@
 <head>
     <title>Página principal - Webear</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <script type="text/javascript" src="js/jquery-2.0.2.min.js"></script>
-    <script type="text/javascript" src="js/jssor.slider.min.js"></script>
-    <script type="text/javascript" src="js/menu.js"></script>
-    <script type="text/javascript" src="js/slider.js"></script>
-    <link rel="stylesheet" href="css/servicios.css">
+    <!--ESTILOS CSS -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/social-sidebar.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/flip-container.css">
+    <!--ESTILOS DE SERVICIOS -->
+    <link rel="stylesheet" href="css/servicios.css">
 </head>
 <body>
 <header class="col-12">
@@ -35,12 +33,10 @@
 <nav id="menu">
     <ul>
         <li class="active"><a href="index.html"><span>Home</span></a></li>
-        <li class="has-sub"><a href="#"><span>Servicios </span></a>
+        <li class="has-sub"><a href="servicios.html"><span>Servicios </span></a>
             <ul>
-                <li><a href="#"><span>Tinto</span></a></li>
-                <li><a href="#"><span>Blanco</span></a></li>
-                <li><a href="#"><span>Rosados</span></a></li>
-                <li><a href="#"><span>Otros</span></a></li>
+                <li><a href="servicios.html#main-content"><span>Nuestros servicios</span></a></li>
+                <li><a href="servicios.html#secundary-content"><span>Tecnologías de desarollo</span></a></li>
             </ul>
         </li>
         <li><a href="projects.html"><span>Proyectos</span></a></li>
@@ -61,7 +57,7 @@
 <div class="col-12" id="main-content">
     <div class="grid2">
         <div class="col-12"><h1>Lo hacemos posible...</h1></div>
-        <div class="col-12" id="main-services1">
+        <div class="col-12 flex">
             <div class="col-4">
                 <h3>Páginas web</h3>
 
@@ -99,7 +95,7 @@
             </div>
 
         </div>
-        <div class="col-12" id="main-services2">
+        <div class="col-12 flex">
             <div class="col-4">
                 <h3>Mantenimiento de paginas web</h3>
 
@@ -122,24 +118,48 @@
                     menor gasto.
                 </div>
             </div>
-                <div class="col-4">
-                    <h3>Formación WordPress y web
+            <div class="col-4">
+                <h3>Formación WordPress y web
 
-                    </h3>
+                </h3>
 
-                    <div class="content-container"><b>Formación en diseño WordPress, HTML5, CSS3, Javascript… </b>a
-                        medida
-                        tanto presencial como a distancia, un profesor solo para ti para cualquier necesidad en sistemas
-                        wordpress o Web… clases por horas o por objetivos de aprendizaje, esta vez no te ganará la
-                        máquina, el éxito es tuyo con nuestras clases a domicilio WordPress…
-                    </div>
+                <div class="content-container"><b>Formación en diseño WordPress, HTML5, CSS3, Javascript… </b>a
+                    medida
+                    tanto presencial como a distancia, un profesor solo para ti para cualquier necesidad en sistemas
+                    wordpress o Web… clases por horas o por objetivos de aprendizaje, esta vez no te ganará la
+                    máquina, el éxito es tuyo con nuestras clases a domicilio WordPress…
                 </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="col-12" id="secundary-content">
+    <div class="grid2">
+        <div class="col-12"><h1>Expertos en tecnologías web</h1></div>
+        <div class="col-12 ">
+            <h3>Tecnologías Front End</h3>
+            <img src="img/servicios/tech-logos-front-end.png" class="foto">
+
+        </div>
+        <div class="col-12 flex">
+            <div class="col-4">
+                <h3>Tecnologías Back End</h3>
+                <img src="img/servicios/php.png" class="foto">
+            </div>
+            <div class="col-4">
+                <h3>Tecnología responsive</h3>
+                <img src="img/servicios/responisve.png" class="foto">
+            </div>
+            <div class="col-4">
+                <h3>Sistema de gestión de contenidos</h3>
+                <img src="img/servicios/cms.png" class="foto">
             </div>
 
         </div>
     </div>
+
 </div>
-<div class="col-12" id="secundary-content"></div>
 <footer>
     <div id="footer-bottom" class="col-12">
         <div class="grid">
@@ -154,5 +174,9 @@
         </div>
     </div>
 </footer>
+<script type="text/javascript" src="js/jquery-2.0.2.min.js"></script>
+<script type="text/javascript" src="js/jssor.slider.min.js"></script>
+<script type="text/javascript" src="js/menu.js"></script>
+<script type="text/javascript" src="js/slider.js"></script>
 </body>
 </html>
