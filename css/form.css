@@ -37,23 +37,23 @@ body {
 
 #name, #surname1, #surname2, #email, #phone, #mobil {
     height: 40px;
-    width: 220px;
+    width: 70%;
     padding: 5px 8px;
 }
 
 #form textarea {
-    padding: 8px;
-    width: 400px;
+    padding: 2%;
+    width: 90%;
 }
 
 #form button {
     margin-left: 50%;
 }
 #form select {
-    width: 200px;
-    padding: 5px;
+    width: 20%;
+    padding: 1%;
     border-radius: 0;
-    height: 34px;
+    height: 8%;
     overflow: hidden;
     background: url('../img/form/down_arrow.jpg') no-repeat right #ffffff;
     border: 1px solid #000000;
