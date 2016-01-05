@@ -1,16 +1,5 @@
-/* ESTILOS DE LA SECCIÓN 'PROYECTOS'' */
+/* ESTILOS DE LA SECCIÓN 'PROYECTOS' */
 
 #projects .intro-image{
 	background-image: url("../img/projects.jpg");	
-}
-
-@media only screen and (max-width: 768px) {
-	.intro-caption {
-		font-size: 1em;
-		width: 70% !important;
-		margin: 0 15% !important;
-	}
-	.intro-caption h3 {
-		font-size: 1.2em;
-	}
 }

@@ -1,5 +1,9 @@
 /* ESTILOS DE LA SECCIÓN 'SERVICIOS' */
 
+#services .intro-image{
+	background-image: url("../img/services.jpg");	
+}
+
 /* Contenido */
 #services-main {
     background-color: #006e9d;
