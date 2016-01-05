@@ -42,6 +42,8 @@ body {
 [class*="col-"] {
 	padding: 10px;
 }
+
+.align-center {text-align: center;}
 @font-face {
   font-family: 'Titillium Web';
   font-style: normal;
@@ -54,6 +56,9 @@ h1 {
 }
 h2 {
 	font-size: 2em;
+}
+h3 {
+	font-size: 1.7em;
 }
 p{
 	font-size: 16px;
