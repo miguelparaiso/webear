@@ -6,7 +6,11 @@
     color: #fff;
 }
 
-#services-main h1, #services-secundary h2 {
+#services-secundary {
+    background-color: #f7f7f7;
+}
+
+#services-main h1, #services-secundary h1 {
     margin-bottom: 0;
 }
 

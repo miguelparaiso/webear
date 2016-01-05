@@ -7,19 +7,13 @@
     <!--JS -->
     <script type="text/javascript" src="js/contact.js"></script>
     <script type="text/javascript" src="js/jquery-2.0.2.min.js"></script>
-    <script type="text/javascript" src="js/jssor.slider.min.js"></script>
     <script type="text/javascript" src="js/menu.js"></script>
-    <script type="text/javascript" src="js/slider.js"></script>
     <!--ESTILOS CSS -->
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="css/slider.css">
     <link rel="stylesheet" href="css/social-sidebar.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/flip-container.css">
-    <!--ESTILO DEL FORMULARIO CSS -->
-    <link rel="stylesheet" href="css/form.css">
 
 </head>
 <body>
@@ -43,15 +37,15 @@
 <nav id="menu">
     <ul>
         <li><a href="index.html"><span>Home</span></a></li>
-        <li class="has-sub"><a href="servicios.html"><span>Servicios </span></a>
+        <li class="has-sub"><a href="services.html"><span>Servicios </span></a>
             <ul>
-                <li><a href="servicios.html#main-content"><span>Nuestros servicios</span></a></li>
-                <li><a href="servicios.html#secundary-content"><span>Tecnologías de desarollo</span></a></li>
+                <li><a href="services.html#services-main"><span>Nuestros servicios</span></a></li>
+                <li><a href="services.html#services-secundary"><span>Tecnologías de desarollo</span></a></li>
             </ul>
         </li>
         <li><a href="projects.html"><span>Proyectos</span></a></li>
-        <li class="active"><a href="contacto.html"><span>Contacto</span></a></li>
-        <li><a href="#"><span>Novedades</span></a></li>
+        <li><a href="team.html"><span>Equipo</span></a></li>
+        <li class="active"><a href="contact.html"><span>Contacto</span></a></li>
     </ul>
 </nav>
 <aside id="sticky-social">
@@ -64,14 +58,14 @@
         <li><a href="#" class="pinterest" target="_blank"><i class="fa fa-pinterest"></i><span>Pinterest</span></a></li>
     </ul>
 </aside>
-<div class="grid">
-
-    <div id="formulario">
-        <div id="header-form"><h2>Formulario de registro </h2><p class="required_notification"> Los campos indicados con * son obligatorios</p></div>
-
-        <form onsubmit="return validar()" id="form" action="exito.html">
+<div id="contact-form">
+    <div id="header-form" class="grid">
+        <h2>Formulario de registro </h2>
+        <p class="required_notification"> Los campos indicados con * son obligatorios</p>
+    </div>
+    <div class="grid">
+        <form onsubmit="return validar()" action="exito.html">
             <fieldset>
-
                 <ul>
                     <li>
                         <label for="name">Nombre </label>
@@ -82,20 +76,17 @@
                         <label for="surname1">Apellido 1</label>
                         <input placeholder="Primer apellido" type="text" id="surname1" oninput="habilitar()"
                                pattern="^([A-Za-z ]{1,30})" title="Se requiere un apellido" required>
-
                     </li>
                     <li>
                         <label for="surname2">Apellido 2</label>
                         <input placeholder="Segundo apllido" type="text" id="surname2" oninput="habilitar()"
                                pattern="^([A-Za-z ]{1,30})" title="Se requiere un apellido" required>
-
                     </li>
                     <li>
                         <label for="email">E-mail</label>
                         <input placeholder="webear@bear.com" type="text" id="email" oninput="habilitar()"
                                pattern="^\w+@\w+?\.*\w{2,3}$"
                                title="Se requiere su email" required>
-
                     </li>
                     <li>
                         <label for="phone">Teléfono Fijo </label>
@@ -103,7 +94,6 @@
                                oninput="habilitar()"
                                pattern="^[9]\d{8}$"
                                title="Numero 9 digitos maximo que empiece por 9">
-
                     </li>
                     <li>
                         <label for="mobil">Teléfono Móvil </label>
@@ -112,43 +102,45 @@
                                pattern="^[6]\d{8}$"
                                title="Numero de 9 digitos maximo que empiece por 6" required>
                     </li>
-                    <li>
-               
-               
-    <textarea id="texto" cols="50" rows="10" placeholder="Escriba sus sugerencias por favor..."
-              oninput="habilitar()"></textarea>
+                    <li>          
+                    <textarea id="texto" cols="50" rows="10" placeholder="Escriba sus sugerencias por favor..."
+                        oninput="habilitar()"></textarea>
                     </li>
                     <li>
-                        Seleccione una opcion de contacto
+                        <div class="flex">
+                        <div class="col-6">
+                        Seleccione una opcion de contacto:
                         <select required id="options" onchange="seleccionaOpcion()">
                             <option selected value="Ninguna">Ninguna</option>
                             <option value="Sugerencia">Sugerencia</option>
                             <option value="Queja">Queja</option>
                             <option value="Informacion">Informacion</option>
                         </select>
-                        Sobre que asunto
+                        </div>
+                        <div class="col-6">
+                        Sobre que asunto:
                         <select id="options2" disabled>
                             <option selected value="">-------------</option>
                             <option  value=""></option>
                             <option  value=""></option>
                         </select>
+                        </div>
+                        </div>
                     </li>
                     <li>
-
-                        <label for="conditions">Terminos y condiciones</label><input class="checkbox" type="checkbox"
-                                                                                              id="conditions" disabled
-                                                                                              onchange="habilitarchk()">
+                        <label for="conditions">Terminos y condiciones</label>
+                        <input class="checkbox" type="checkbox" id="conditions" disabled onchange="habilitarchk()">
                     </li>
                     <li>
                         <input type="submit" value="Send" id="submit" disabled class="boton" >
                         <input type="reset" value="Delete" class="boton">
                     </li>
-
                 </ul>
             </fieldset>
         </form>
     </div>
 </div>
+
 <footer>
     <div id="footer-bottom" class="col-12">
         <div class="grid">

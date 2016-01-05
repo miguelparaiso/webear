@@ -6,7 +6,7 @@ html, body {
 	min-height: 100%;
 }
 body {
-	background-color: #f7f7f7;
+	background-color: #464646;
 	font-family: 'Titillium Web', sans-serif;
 	margin: 0;
 }
@@ -27,6 +27,9 @@ body {
 .clear {
 	clear: both;
 }
+.flex {
+	display: flex;
+}
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}
@@ -42,7 +45,6 @@ body {
 [class*="col-"] {
 	padding: 10px;
 }
-
 .align-center {text-align: center;}
 @font-face {
   font-family: 'Titillium Web';
