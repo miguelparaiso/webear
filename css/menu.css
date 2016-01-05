@@ -1,3 +1,5 @@
+/* ESTILOS DEL MENÚ */
+
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
@@ -91,6 +93,9 @@
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 1px;
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 #menu > ul > li:first-child a {
   border-left: 1px solid #000;
@@ -124,7 +129,7 @@
   position: absolute;
   left: -9999px;
   top: 60px;
-  padding-top: 5px;
+  padding-top: 6px;
   font-size: 13px;
   opacity: 0;
   -webkit-transition: top 0.2s ease, opacity 0.2s ease-in;

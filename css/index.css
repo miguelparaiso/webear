@@ -1,3 +1,5 @@
+/* ESTILOS DEL HOME */
+
 #home #slider-title{
 	height: 65px;
 	position: absolute;
@@ -37,7 +39,7 @@
 	font-weight: 300;
 }
 #home #about #about-logo {
-	background: url(../img/logo-icon-blue.png) no-repeat;
+	background: url(../img/logos/logo-icon-blue.png) no-repeat;
     background-size: 75%;
     background-position: 50% 90%;
 }
