@@ -1,16 +1,16 @@
 /* ESTILOS COMUNES A TODA LA PAGINA */
 
 /* Contenido */
-#main-content {
+#services-main {
     background-color: #006e9d;
     color: #fff;
 }
 
-#secundary-content h1 {
+#services-main h1, #services-secundary h2 {
     margin-bottom: 0;
 }
 
-#secundary-content h2{
+#services-secundary h2{
     font-size: 1.7em;
     text-align: center;
 }
