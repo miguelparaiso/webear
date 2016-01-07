@@ -1,37 +1,22 @@
 /* ESTILOS DE LA SECCIÓN 'SERVICIOS' */
 
 #services .intro-image{
-	background-image: url("../img/services.jpg");	
+	background-image: url("../img/services.jpg");
+    background-size: 100%;	
 }
-
-/* Contenido */
 #services-main {
     background-color: #006e9d;
     color: #fff;
 }
-
 #services-secundary {
     background-color: #f7f7f7;
 }
-
-#services-main h1, #services-secundary h1 {
+#services-main h2, #services-secundary h2 {
     margin-bottom: 0;
 }
-
-#services-secundary h2{
-    font-size: 1.7em;
+#services-secundary h3{
     text-align: center;
 }
-
-.flex {
-    display: flex;
-    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-    display: -ms-flexbox;      /* TWEENER - IE 10 */
-    display: -webkit-flex;     /* NEW - Chrome */
-    display: flex;
-}
-.foto{
-    height: 100%;
+#services-secundary img{
     width: 100%;
 }
