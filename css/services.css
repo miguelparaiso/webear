@@ -2,7 +2,6 @@
 
 #services .intro-image{
 	background-image: url("../img/intros/services.jpg");
-    background-size: 100%;	
 }
 #services-main {
     background-color: #006e9d;
@@ -18,4 +17,10 @@
 }
 #services-secundary img{
     width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    #services-secundary img {
+        width: 50%;
+    }
 }

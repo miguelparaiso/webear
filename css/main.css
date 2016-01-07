@@ -277,6 +277,10 @@ footer a:active{
 	header .grid #logo img{
 		height: 90px;
 	}
+	section .intro .intro-image {
+		height: 240px;
+		background-attachment: initial;
+	}
 	footer #footer-top .col-1 {
 		width: 81px;
 	}
@@ -321,9 +325,6 @@ footer a:active{
 	header #header-links .bottom-links a#contact-phone span:after {
 		display: none;
 		visibility: hidden;
-	}
-	section {
-		height: 100%;
 	}
 	.intro-caption {
 		font-size: 1em;

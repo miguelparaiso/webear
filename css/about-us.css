@@ -2,7 +2,6 @@
 
 #about-us .intro-image{
 	background-image: url("../img/intros/about-us.jpg");
-    background-size: 100%;
 }
 #about-us h1 {
     margin-bottom: 0;
@@ -25,4 +24,10 @@
 }
 #about-secundary {
     background-color: #f7f7f7;
+}
+
+@media only screen and (max-width: 768px) {
+    #about-main img {
+        width: 40%;
+    }
 }
