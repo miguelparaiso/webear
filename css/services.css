@@ -1,7 +1,7 @@
 /* ESTILOS DE LA SECCIÓN 'SERVICIOS' */
 
 #services .intro-image{
-	background-image: url("../img/services.jpg");
+	background-image: url("../img/intros/services.jpg");
     background-size: 100%;	
 }
 #services-main {
