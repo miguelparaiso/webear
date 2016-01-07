@@ -240,39 +240,27 @@ section a:hover{
 	color: #464646;
 	text-decoration: underline;
 }
-
 footer #footer-bottom {
 	background-color: #464646;
 	color: #f7f7f7;
+	padding: 15px 0;
 }
-footer .footerInf, footer .footerInf2 {
-	float: left;
-	padding: 0;
+footer .footerInf {
+	padding: 10px 0;
 	margin: auto 0;
+	text-align: center;
 }
-
-footer .footerInf2 {
-	text-align: right;
-}
-footer .footerInf2 span {
-    position: relative;
-    top: -3px;
-}
-
 footer p {
 	margin: 0;
 }
-
 footer a {
 	color: #fff;
-}
-	
+}	
 footer a:hover {
 	color: #d0d0d0;
 	text-decoration:underline;
 	cursor:pointer;
 }
-
 footer a:active{
 	color: #fff;
 	text-decoration: underline;

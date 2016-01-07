@@ -1,7 +1,10 @@
 #empresas{
 	width:960px;
 	overflow: hidden;
-	height: 100px;
+	height: 122px;
+    border: 1px solid #464646;
+    border-radius: 30px;
+    padding: 10px 0;
 }
 #titulo-empresas{
 	text-align: center;

@@ -16,7 +16,7 @@ ul {
 #sticky-social {
    left: 0;
    position: fixed;
-   top: 500px;
+   top: 35px;
    z-index: 999;
 }
 #sticky-social a {

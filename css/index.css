@@ -60,8 +60,29 @@
 #home #about #about-inf b {
 	font-weight: 600;
 }
-
-/* estilos slider empresas */
+#home #empresas{
+	width:960px;
+	overflow: hidden;
+	height: 122px;
+    border: 1px solid #464646;
+    border-radius: 30px;
+    padding: 10px 0;
+	margin-bottom: 20px;
+}
+#home #titulo-empresas{
+	text-align: center;
+}
+#home #empresas img{
+	-webkit-transition: 2s ease-out;
+    -moz-transition: 2s ease-out;
+    transition: 2s ease-out;
+}
+/* Multiplicar por 320 cada logo "de más" que haya en la imagen de empresas */
+#home #empresas img:hover{
+	-moz-transform: translateX(-640px);
+    -webkit-transform: translateX(-640px);
+    transform: translateX(-640px);
+}
 
 @media only screen and (max-width: 1050px) {
 	#home #slider-title{
