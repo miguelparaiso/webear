@@ -1,5 +1,0 @@
-Cambios sugeridos por cliente a día 17/12/2015:
-
-2 listas desplegables
-	- La primera "Tipo de consulta": Sugerencia, queja, solicitud.
-	- Al principio deshabilitada y pondrá "sobre que asunto" y cuando se seleccione la primera apareceran productos, sitio web, otro...
