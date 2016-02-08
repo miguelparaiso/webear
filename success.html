@@ -28,6 +28,15 @@
     <title></title>
 </head>
 <body>
-<p>Su formulario ha sido enviado con exito</p>
+<p>Su formulario ha sido enviado con exito, será redirigido a la pagina en <span id="countdown">5</span> segundos</p>
+<script>
+    setTimeout(function () {
+        window.location.href = "contact.html";
+        setTimeout(function(){
+            document.getElementById('countdown').innerHTML = ''+contador;
+        },1000)
+    }, 5000);
+
+</script>
 </body>
 </html>

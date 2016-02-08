@@ -110,8 +110,13 @@
 
 #contact-form li {
     padding: 10px;
-    border-bottom: 1px solid #c2d6d6;
     position: relative;
+}
+.help-block {
+    margin-top: 0.5em ;
+    text-align: center;
+    color: red;
+    font-size: 1em;
 }
 /* ESTILOS PARA VERIFICAR LOS CAMPOS*/
 #contact-form input:required, #contact-form textarea:required {
@@ -127,6 +132,12 @@
     box-shadow: 0 0 5px #5cd053;
     border-color: #28921f;
 }
+#contact-form input:focus:valid{
+    background: #fff url(../img/form/valid.png) no-repeat 98% center;
+    box-shadow: 0 0 5px #5cd053;
+    border-color: #28921f;
+}
+
 /* BOTONES */
 .boton {
     -webkit-border-radius: 0;
