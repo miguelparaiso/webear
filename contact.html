@@ -32,6 +32,7 @@
         </div>
         <div id="header-links" class="col-7">
             <div class="top-links col-12">
+                <a href="#">Hola</a><span> | </span>
                 <a href="#">Español - ES</a><span> | </span><a href="#">Ayuda</a>
             </div>
             <div class="bottom-links col-12">
@@ -89,7 +90,7 @@
                     </li>
                     <li>
                         <label for="surname2">Apellido 2 * </label>
-                        <input placeholder="Segundo apllido" type="text" id="surname2" oninput="habilitar(); onError(this, this.id);"
+                        <input placeholder="Segundo apellido" type="text" id="surname2" oninput="habilitar(); onError(this, this.id);"
                                onblur="vaciarError(this)" pattern="^([A-ZÁÉÍÓÚa-záéíóú ]{1,30})" title="Se requiere un apellido (sólo carácteres)" required>
                         <div id="errorSurname2"></div>
                     </li>
@@ -108,21 +109,21 @@
                                oninput="habilitar(); onError(this, this.id);"
                                pattern="^[9]\d{8}$"
                                onblur="vaciarError(this)"
-                               title="Numero 9 digitos maximo que empiece por 9">
+                               title="Número 9 digitos maximo que empiece por 9">
                         <div id="errorPhone"></div>
                     </li>
                     <li>
 
                         <label for="mobil">Teléfono Móvil *</label>
-                        <input placeholder="Telefono movil (600 000 000)" type="tel" id="mobil"
+                        <input placeholder="Teléfono movil (600 000 000)" type="tel" id="mobil"
                                oninput="habilitar(); onError(this, this.id);"
                                pattern="^[6]\d{8}$"
                                onblur="vaciarError(this)"
-                               title="Numero de 9 digitos maximo que empiece por 6" required>
+                               title="Número de 9 digitos maximo que empiece por 6" required>
                         <div id="errorMobil"></div>
                     </li>
                     <li>
-                            <textarea id="texto" cols="50" rows="10" placeholder="Escriba sus sugerencias por favor..."
+                            <textarea id="texto" cols="50" rows="10" placeholder="Escriba sus sugerencias, por favor..."
                                       oninput="habilitar()"></textarea>
                     </li>
                     <li>

@@ -157,6 +157,11 @@ function onError(field, id) {
     }
 
 }
+/**
+ * funcion que llamamos con un envento onblur para que si el campo se deja vacio sin rellenar borre el mensaje
+ * de error.
+ * @param field
+ */
 function vaciarError(field){
     if(field.value == ''){
         var div = field.nextElementSibling;
