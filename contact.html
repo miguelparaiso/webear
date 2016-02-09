@@ -17,14 +17,18 @@
     <script type="text/javascript" src="js/menu.js"></script>
     <script type="text/javascript" src="js/licenciaPopUp.js"></script>
     <script type="text/javascript" src="js/cookies.js"></script>
+    <script type="text/javascript" src="js/cookiebar.js"></script>
+    <link rel="stylesheet" href="css/cookiebar.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/social-sidebar.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
 
+
+
 </head>
-<body onload="getCookies()">
+<body onload="getCookies(); setNameCookie();">
 <header class="col-12">
     <div class="grid">
         <div id="logo" class="col-5">
@@ -32,7 +36,8 @@
         </div>
         <div id="header-links" class="col-7">
             <div class="top-links col-12">
-                <a href="#">Hola</a><span> | </span>
+                <div id="user-log">Bienvenid@ <span id="user-span">Usuario</span></div>
+                <a href="contact.html" id="logout" onclick="userlogout()">Logout</a><span> | </span>
                 <a href="#">Español - ES</a><span> | </span><a href="#">Ayuda</a>
             </div>
             <div class="bottom-links col-12">
@@ -176,7 +181,10 @@
         </div>
     </div>
 </footer>
-<script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $.cookieBar();
+    });
 </script>
 </body>
 </html>
