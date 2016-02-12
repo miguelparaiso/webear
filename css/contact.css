@@ -110,8 +110,13 @@
 
 #contact-form li {
     padding: 10px;
-    border-bottom: 1px solid #c2d6d6;
     position: relative;
+}
+.help-block {
+    margin-top: 0.5em ;
+    text-align: center;
+    color: red;
+    font-size: 1em;
 }
 /* ESTILOS PARA VERIFICAR LOS CAMPOS*/
 #contact-form input:required, #contact-form textarea:required {

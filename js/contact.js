@@ -1,3 +1,13 @@
+/************ EXPRESIONES REGULARES ************/
+/************ expresion regular sting con espacio ************/
+var regexString = /^[a-záéíóúÁÉÍÓÚ]+$/i;
+/************ expresion regular email ************/
+var regexEmail = /^\w+@\w+?\.*\w{2,3}$/;
+/************ expresion regular telefono movil ************/
+var regexTelefonoMovil = /^6\d{8}$/;
+/************ expresion regular telefono Fijo ************/
+var regexTelefonoFijo = /^9\d{8}$/;
+
 /**
  * funcion que comprueba si todos los campos estan rellenados y su longitud no es nula
  * de ser asi habilita el campo de terminos y condiciones
@@ -42,7 +52,8 @@ function habilitarchk() {
  * @returns {boolean}
  */
 function chk(regexp, input) {
-    return (regexp.test(input));
+    //alert((regexp.test(input)));
+    return regexp.test(input);
 }
 function validar() {
     /************ CAMPOS A COMPROBAR ************/
@@ -58,13 +69,6 @@ function validar() {
     /* Opcione seleccionada*/
     var opcion = auxCont.options[opcionSeleccionada].text;
 
-    /************ EXPRESIONES REGULARES ************/
-    /************ expresion regular sting con espacio ************/
-    var regexString = /^([a-z ]{1,30})/i;
-    /************ expresion regular email ************/
-    var regexEmail = /^\w+@\w+?\.*\w{2,3}$/;
-    /************ expresion regular telefono movil ************/
-    var regexTelefonoMovil = /^[6]\d{8}$/;
     switch (true) {
         case (!chk(regexString, nombre)):
             alert('Nombre erroneo');
@@ -85,6 +89,12 @@ function validar() {
             alert('Seleccione una opcion');
             return false;
     }
+    /** CREAMOS LAS COOKIES **/
+    createCookie('name', nombre, 7);
+    createCookie('surname1', apellido1, 7);
+    createCookie('surname2', apellido2, 7);
+    createCookie('email', email, 7);
+
     return true
 }
 function seleccionaOpcion() {
@@ -113,6 +123,35 @@ function seleccionaOpcion() {
         var aux = new Option(ciudad[i]);
         auxOpcion.options.add(aux);
     }
+
+}
+/**
+ * Funcion que comprueba si un campo tiene un error y si lo tiene genera un div debajo
+ * indicando con un mensaje como debe rellenarse el campo
+ * @param field
+ * @param id
+ */
+function onError(field, id) {
+    var mensaje = '';
+    switch (id) {
+        case 'name':
+        case 'surname1':
+        case 'surname2':
+            mensaje = (!chk(regexString, field.value)) ? 'Introduce solo letras, por favor' : '';
+            break;
+        case 'email':
+            mensaje = (!chk(regexEmail, field.value)) ? 'Introduce el email correcamente, por favor' : '';
+            break;
+        case 'phone':
+            mensaje = (!chk(regexTelefonoFijo, field.value)) ? 'El teléfono debe empezar por 9 y tener 9 cifras ' : '';
+            break;
+        case 'mobil':
+            mensaje = (!chk(regexTelefonoMovil, field.value)) ? 'El teléfono debe empezar por 6 y tener 9 cifras ' : '';
+            break;
+    }
+    var div = field.nextElementSibling;
+    div.classList.add('help-block');
+    div.innerHTML = mensaje;
 
 
 }
