@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /************ EXPRESIONES REGULARES ************/
+=======
+
+>>>>>>> f5b3544abc7d1ca6b54d1d2f723e95d1548ed4b6
 /************ expresion regular sting con espacio ************/
 var regexString = /^[a-záéíóúÁÉÍÓÚ]+$/i;
 /************ expresion regular email ************/
@@ -52,7 +56,10 @@ function habilitarchk() {
  * @returns {boolean}
  */
 function chk(regexp, input) {
+<<<<<<< HEAD
     //alert((regexp.test(input)));
+=======
+>>>>>>> f5b3544abc7d1ca6b54d1d2f723e95d1548ed4b6
     return regexp.test(input);
 }
 function validar() {
@@ -152,6 +159,28 @@ function onError(field, id) {
     var div = field.nextElementSibling;
     div.classList.add('help-block');
     div.innerHTML = mensaje;
+<<<<<<< HEAD
 
 
 }
+=======
+    if (field.value == ''){
+        div = field.nextElementSibling;
+        div.innerHTML = 'Rellene el campo, por favor';
+    }
+
+}
+/**
+ * funcion que llamamos con un envento onblur para que si el campo se deja vacio sin rellenar borre el mensaje
+ * de error.
+ * @param field
+ */
+function vaciarError(field){
+    if(field.value == ''){
+        var div = field.nextElementSibling;
+        div.innerHTML = '';
+
+    }
+}
+
+>>>>>>> f5b3544abc7d1ca6b54d1d2f723e95d1548ed4b6

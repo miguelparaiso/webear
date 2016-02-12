@@ -132,6 +132,12 @@
     box-shadow: 0 0 5px #5cd053;
     border-color: #28921f;
 }
+#contact-form input:focus:valid{
+    background: #fff url(../img/form/valid.png) no-repeat 98% center;
+    box-shadow: 0 0 5px #5cd053;
+    border-color: #28921f;
+}
+
 /* BOTONES */
 .boton {
     -webkit-border-radius: 0;

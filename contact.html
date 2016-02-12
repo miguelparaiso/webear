@@ -17,20 +17,27 @@
     <script type="text/javascript" src="js/menu.js"></script>
     <script type="text/javascript" src="js/licenciaPopUp.js"></script>
     <script type="text/javascript" src="js/cookies.js"></script>
+    <script type="text/javascript" src="js/cookiebar.js"></script>
+    <link rel="stylesheet" href="css/cookiebar.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/social-sidebar.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
+
+
+
 </head>
-<body onload="getCookies()">
+<body onload="getCookies(); setNameCookie();">
 <header class="col-12">
     <div class="grid">
         <div id="logo" class="col-5">
-            <h1><a href="index.html"><img src="img/logos/logo.png" alt="Logo Webear"/></a></h1>
+            <h1><a href="index.html"><img src="img/Logos/logo.png" alt="Logo Webear"/></a></h1>
         </div>
         <div id="header-links" class="col-7">
             <div class="top-links col-12">
+                <div id="user-log">Bienvenid@ <span id="user-span">Usuario</span></div>
+                <a href="contact.html" id="logout" onclick="userlogout()">Logout</a><span> | </span>
                 <a href="#">Español - ES</a><span> | </span><a href="#">Ayuda</a>
             </div>
             <div class="bottom-links col-12">
@@ -75,56 +82,59 @@
             <fieldset>
                 <ul>
                     <li>
-                        <label for="name">Nombre </label>
+                        <label for="name">Nombre * </label>
                         <input placeholder="Nombre" type="text" id="name" oninput="habilitar(); onError(this, this.id);"
-                               pattern="^([A-ZÁÉÍÓÚa-záéíóú ]{1,30})" title="Se requiere un nombre" required>
+                               onblur="vaciarError(this)" pattern="^([A-ZÁÉÍÓÚa-záéíóú ]{1,30})" title="Se requiere un nombre (sólo carácteres)" required>
                         <div id="errorName"></div>
                     </li>
                     <li>
-                        <label for="surname1">Apellido 1</label>
+                        <label for="surname1">Apellido 1 *</label>
                         <input placeholder="Primer apellido" type="text" id="surname1" oninput="habilitar(); onError(this, this.id);"
-                               pattern="^([A-ZÁÉÍÓÚa-záéíóú ]{1,30})" title="Se requiere un apellido" required>
+                               onblur="vaciarError(this)" pattern="^([A-ZÁÉÍÓÚa-záéíóú ]{1,30})" title="Se requiere un apellido (sólo carácteres)" required>
                         <div id="errorSurname1"></div>
                     </li>
                     <li>
-                        <label for="surname2">Apellido 2</label>
-                        <input placeholder="Segundo apllido" type="text" id="surname2" oninput="habilitar(); onError(this, this.id);"
-                               pattern="^([A-ZÁÉÍÓÚa-záéíóú ]{1,30})" title="Se requiere un apellido" required>
+                        <label for="surname2">Apellido 2 * </label>
+                        <input placeholder="Segundo apellido" type="text" id="surname2" oninput="habilitar(); onError(this, this.id);"
+                               onblur="vaciarError(this)" pattern="^([A-ZÁÉÍÓÚa-záéíóú ]{1,30})" title="Se requiere un apellido (sólo carácteres)" required>
                         <div id="errorSurname2"></div>
                     </li>
                     <li>
-                        <label for="email">E-mail</label>
+                        <label for="email">E-mail *</label>
                         <input placeholder="webear@bear.com" type="text" id="email" oninput="habilitar(); onError(this, this.id);"
                                pattern="^\w+@\w+?\.*\w{2,3}$"
+                               onblur="vaciarError(this)"
                                title="Se requiere su email" required>
                         <div id="errorMail"></div>
                     </li>
                     <li>
 
                         <label for="phone">Teléfono Fijo </label>
-                        <input placeholder="Telefono fijo" type="tel" id="phone"
+                        <input placeholder="Telefono fijo (900 000 000)" type="tel" id="phone"
                                oninput="habilitar(); onError(this, this.id);"
                                pattern="^[9]\d{8}$"
-                               title="Numero 9 digitos maximo que empiece por 9">
+                               onblur="vaciarError(this)"
+                               title="Número 9 digitos maximo que empiece por 9">
                         <div id="errorPhone"></div>
                     </li>
                     <li>
 
-                        <label for="mobil">Teléfono Móvil </label>
-                        <input placeholder="Telefono movil" type="tel" id="mobil"
+                        <label for="mobil">Teléfono Móvil *</label>
+                        <input placeholder="Teléfono movil (600 000 000)" type="tel" id="mobil"
                                oninput="habilitar(); onError(this, this.id);"
                                pattern="^[6]\d{8}$"
-                               title="Numero de 9 digitos maximo que empiece por 6" required>
+                               onblur="vaciarError(this)"
+                               title="Número de 9 digitos maximo que empiece por 6" required>
                         <div id="errorMobil"></div>
                     </li>
                     <li>
-                            <textarea id="texto" cols="50" rows="10" placeholder="Escriba sus sugerencias por favor..."
+                            <textarea id="texto" cols="50" rows="10" placeholder="Escriba sus sugerencias, por favor..."
                                       oninput="habilitar()"></textarea>
                     </li>
                     <li>
                         <div class="flex">
                             <div class="col-6">
-                                Seleccione el motivo de contacto:
+                                <label for="options"> Seleccione el motivo de contacto:</label>
                                 <select required id="options" onchange="seleccionaOpcion()">
                                     <option selected value="Ninguna">Ninguna</option>
                                     <option value="Sugerencia">Sugerencia</option>
@@ -133,7 +143,7 @@
                                 </select>
                             </div>
                             <div class="col-6">
-                                Sobre que asunto:
+                                <label for="options2"> Sobre que asunto:</label>
                                 <select id="options2" disabled>
                                     <option selected value="">-------------</option>
                                     <option value=""></option>
@@ -171,5 +181,10 @@
         </div>
     </div>
 </footer>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $.cookieBar();
+    });
+</script>
 </body>
 </html>

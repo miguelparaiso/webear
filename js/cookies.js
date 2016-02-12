@@ -1,3 +1,9 @@
+/**
+ * Crea una cookie a pasándole por parametros un nombre, un valor y un tiempo de expiracion en dias
+ * @param name
+ * @param value
+ * @param days
+ */
 function createCookie(name, value, days) {
     if (days) {
         var date = new Date();
@@ -7,7 +13,11 @@ function createCookie(name, value, days) {
     else  expires = "";
     document.cookie = name + "=" + value + expires + "; path=/";
 }
-
+/**
+ * funcion que retorna el valor de una cookie
+ * @param c_name : cookie name
+ * @returns {*}
+ */
 function getCookie(c_name) {
     if (document.cookie.length > 0) {
         var c_start = document.cookie.indexOf(c_name + "=");
@@ -22,18 +32,37 @@ function getCookie(c_name) {
     }
     return "";
 }
+/**
+ * Funcion que borra las cookies de usuario;
+ */
+function userlogout() {
+    eraseCookie('name');
+    eraseCookie('surname1');
+    eraseCookie('surname2');
+    eraseCookie('email');
 
+}
+/**
+ * funcion que borra una cookie
+ * @param name
+ */
 function eraseCookie(name) {
     createCookie(name, "", -1);
 }
+/**
+ * Obtiene el valor de las cookies de usuario y las muestra en el formulario
+ */
 function getCookies() {
     document.getElementById('name').value = getCookie('name');
     document.getElementById('surname1').value = getCookie('surname1');
     document.getElementById('surname2').value = getCookie('surname2');
     document.getElementById('email').value = getCookie('email');
-
-
-
-
+}
+/**
+ * Cambia el nombre de usuario si existe la cookie
+ */
+function setNameCookie() {
+        if (getCookie('name').length)
+            document.getElementById("user-span").innerText = getCookie('name');
 
 }
