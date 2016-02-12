@@ -19,6 +19,9 @@
 	margin-bottom: 0px;
     text-align: center;
 }
+#company-slider {
+	padding-top: 0;
+}
 #home .grid2 .title {
 	border-bottom: 3px solid #006e9d;
 	color: #464646;
