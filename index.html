@@ -13,10 +13,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="shortcut icon" href="favicon.ico"/>
     <script type="text/javascript" src="js/jquery-2.0.2.min.js"></script>
-    <script type="text/javascript" src="js/jssor.slider.min.js"></script>
     <script type="text/javascript" src="js/menu.js"></script>
     <script type="text/javascript" src="js/licenciaPopUp.js"></script>
-    <script type="text/javascript" src="js/slider.js"></script>
     <script type="text/javascript" src="js/cookies.js"></script>
     <script type="text/javascript" src="js/cookiebar.js"></script>
     <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
@@ -76,49 +74,53 @@
     </ul>
 </aside>
 <section id="home">
-    <!--<div id="slider-title" class="grid">
-        <h2>Diseño y programación web</h2>
-    </div>-->
-    <!-- SLIDER -->
-    <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1600px !important;
-									height: 350px; overflow: hidden; visibility: hidden;">
-        <!-- Loading Screen -->
-        <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
-            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px;
-							left: 0px; width: 100%; height: 100%;"></div>
-            <div style="position:absolute;display:block;top:0px;left:0px;width:100%;height:100%;"></div>
-        </div>
-        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1600px !important;
-										 height: 450px; overflow: hidden;">
-            <div data-p="225.00" style="display: none;">
-                <img data-u="image" src="img/slider/slider_1.jpg"/>
-            </div>
-            <div data-p="225.00" style="display: none;">
-                <img data-u="image" src="img/slider/slider_2.jpg"/>
-            </div>
-            <div data-p="225.00" style="display: none;">
-                <img data-u="image" src="img/slider/slider_3.jpg"/>
-            </div>
-            <div data-p="225.00" style="display: none;">
-                <img data-u="image" src="img/slider/slider_4.jpg"/>
-            </div>
-        </div>
-        <!-- Bullet Navigator -->
-        <div data-u="navigator" class="jssorb05" style="bottom: 16px; right: 6px; width: 100px; height: 16px;
-															left: 520px;" noscale="true" autocenter="1">
-            <!-- bullet navigator item prototype -->
-            <div data-u="prototype" style="width:16px !important;height:16px;"></div>
-        </div>
-        <!-- Arrow Navigator -->
-        <span data-u="arrowleft" class="jssora22l" style="top: 202.5px; left: 8px;" noscale="true"
-              autocenter="2"></span>
-        <span data-u="arrowright" class="jssora22r" style="top: 202.5px; right: 8px;" noscale="true"
-              autocenter="2"></span>
-        <a href="http://www.jssor.com" style="display:none">Jssor Slider</a>
-    </div>
-    <script>
-        jssor_1_slider_init();
-    </script>
+	<!-- Slider -->
+	<div class="csslider1 autoplay ">
+		<input name="cs_anchor1" id="cs_slide1_0" type="radio" class="cs_anchor slide">
+		<input name="cs_anchor1" id="cs_slide1_1" type="radio" class="cs_anchor slide">
+		<input name="cs_anchor1" id="cs_slide1_2" type="radio" class="cs_anchor slide">
+		<input name="cs_anchor1" id="cs_slide1_3" type="radio" class="cs_anchor slide">
+		<input name="cs_anchor1" id="cs_play1" type="radio" class="cs_anchor" checked="">
+		<input name="cs_anchor1" id="cs_pause1_0" type="radio" class="cs_anchor pause">
+		<input name="cs_anchor1" id="cs_pause1_1" type="radio" class="cs_anchor pause">
+		<input name="cs_anchor1" id="cs_pause1_2" type="radio" class="cs_anchor pause">
+		<input name="cs_anchor1" id="cs_pause1_3" type="radio" class="cs_anchor pause">
+		<ul>
+			<li class="cs_skeleton"><img src="img/slider/slider_1.jpg" style="width: 100%;"></li>
+			<li class="num0 img slide"> <img src="img/slider/slider_1.jpg" alt="slider_1" title="slider_1"></li>
+			<li class="num1 img slide"> <img src="img/slider/slider_2.jpg" alt="slider_2" title="slider_2"></li>
+			<li class="num2 img slide"> <img src="img/slider/slider_3.jpg" alt="slider_3" title="slider_3"></li>
+			<li class="num3 img slide"> <img src="img/slider/slider_4.jpg" alt="slider_4" title="slider_4"></li>
+		</ul>
+		<div class="cs_play_pause">
+			<label class="cs_play" for="cs_play1"><span><i></i><b></b></span></label>
+			<label class="cs_pause num0" for="cs_pause1_0"><span><i></i><b></b></span></label>
+			<label class="cs_pause num1" for="cs_pause1_1"><span><i></i><b></b></span></label>
+		</div>
+		<div class="cs_arrowprev">
+			<label class="num0" for="cs_slide1_0"><span><i></i><b></b></span></label>
+			<label class="num1" for="cs_slide1_1"><span><i></i><b></b></span></label>
+			<label class="num2" for="cs_slide1_2"><span><i></i><b></b></span></label>
+			<label class="num3" for="cs_slide1_3"><span><i></i><b></b></span></label>
+		</div>
+		<div class="cs_arrownext">
+			<label class="num0" for="cs_slide1_0"><span><i></i><b></b></span></label>
+			<label class="num1" for="cs_slide1_1"><span><i></i><b></b></span></label>
+			<label class="num2" for="cs_slide1_2"><span><i></i><b></b></span></label>
+			<label class="num3" for="cs_slide1_3"><span><i></i><b></b></span></label>
+		</div>
+		<div class="cs_bullets">
+			<label class="num0" for="cs_slide1_0"> <span class="cs_point"></span>
+				<span class="cs_thumb"><img src="img/slider/tooltips/slider_1.jpg" alt="slider_1" title="slider_1"></span></label>
+			<label class="num1" for="cs_slide1_1"> <span class="cs_point"></span>
+				<span class="cs_thumb"><img src="img/slider/tooltips/slider_2.jpg" alt="slider_2" title="slider_2"></span></label>
+			<label class="num2" for="cs_slide1_2"> <span class="cs_point"></span>
+				<span class="cs_thumb"><img src="img/slider/tooltips/slider_3.jpg" alt="slider_3" title="slider_3"></span></label>
+			<label class="num3" for="cs_slide1_3"> <span class="cs_point"></span>
+				<span class="cs_thumb"><img src="img/slider/tooltips/slider_4.jpg" alt="slider_4" title="slider_4"></span></label>
+		</div>
+	</div>
+	<!-- End Slider -->
     <!-- Contenido web -->
     <article id="about">
         <div class="grid">
