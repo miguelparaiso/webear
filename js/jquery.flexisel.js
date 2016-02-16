@@ -186,12 +186,6 @@ $(window).load(function () {
                     }
 
                 });
-                $(leftArrow).on("click", function(event) {
-                    methods.scrollLeft();
-                });
-                $(rightArrow).on("click", function(event) {
-                    methods.scrollRight();
-                });
                 if (settings.pauseOnHover === true) {
                     $(".nbs-flexisel-item").on({
                         mouseenter : function() {
