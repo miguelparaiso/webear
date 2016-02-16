@@ -1,0 +1,186 @@
+<<<<<<< HEAD
+/************ EXPRESIONES REGULARES ************/
+=======
+
+>>>>>>> f5b3544abc7d1ca6b54d1d2f723e95d1548ed4b6
+/************ expresion regular sting con espacio ************/
+var regexString = /^[a-záéíóúÁÉÍÓÚ]+$/i;
+/************ expresion regular email ************/
+var regexEmail = /^\w+@\w+?\.*\w{2,3}$/;
+/************ expresion regular telefono movil ************/
+var regexTelefonoMovil = /^6\d{8}$/;
+/************ expresion regular telefono Fijo ************/
+var regexTelefonoFijo = /^9\d{8}$/;
+
+/**
+ * funcion que comprueba si todos los campos estan rellenados y su longitud no es nula
+ * de ser asi habilita el campo de terminos y condiciones
+ */
+function habilitar() {
+    var array = Array();
+    array.push(document.getElementById("name").value.length);
+    array.push(document.getElementById("surname1").value.length);
+    array.push(document.getElementById("surname2").value.length);
+    array.push(document.getElementById("email").value.length);
+    array.push(document.getElementById("mobil").value.length);
+    array.push(document.getElementById("texto").value.length);
+
+    var camposRellenados = true;
+    for (var i = 0; i < array.length; i++) {
+        if (Number(array[i]) <= 0) {
+            camposRellenados = false;
+            break;
+        }
+    }
+    if (camposRellenados) {
+        document.getElementById("conditions").disabled = false;
+
+    } else {
+        document.getElementById("conditions").disabled = true;
+        document.getElementById("conditions").checked = false;
+        document.getElementById("submit").disabled = true;
+    }
+
+}
+/**
+ * funcion que habilita o deshabilita el boton de submit segun se pulse en el campo checkbox condiciones
+ */
+function habilitarchk() {
+    document.getElementById("submit").disabled = (document.getElementById("conditions").checked) ? false : true;
+
+}
+/**
+ * Funcion que comprueba si el parametro imput introducido cumple el parametro patron
+ * @param regexp
+ * @param input
+ * @returns {boolean}
+ */
+function chk(regexp, input) {
+<<<<<<< HEAD
+    //alert((regexp.test(input)));
+=======
+>>>>>>> f5b3544abc7d1ca6b54d1d2f723e95d1548ed4b6
+    return regexp.test(input);
+}
+function validar() {
+    /************ CAMPOS A COMPROBAR ************/
+    var nombre = document.getElementById("name").value;
+    var apellido1 = document.getElementById("surname1").value;
+    var apellido2 = document.getElementById("surname2").value;
+    var email = document.getElementById("email").value;
+    var telefonoMovil = document.getElementById("mobil").value;
+
+    /* Opciones del select*/
+    var auxCont = document.getElementById("options");
+    var opcionSeleccionada = auxCont.selectedIndex;
+    /* Opcione seleccionada*/
+    var opcion = auxCont.options[opcionSeleccionada].text;
+
+    switch (true) {
+        case (!chk(regexString, nombre)):
+            alert('Nombre erroneo');
+            return false;
+        case (!chk(regexString, apellido1)):
+            alert('Primer apellido erroneo');
+            return false;
+        case (!chk(regexString, apellido2)):
+            alert('Segundo apellido erroneo');
+            return false;
+        case (!chk(regexEmail, email)):
+            alert('Email erroneo');
+            return false;
+        case (!chk(regexTelefonoMovil, telefonoMovil)):
+            alert('Telefono movil erroneo');
+            return false;
+        case (opcion == 'Ninguna'):
+            alert('Seleccione una opcion');
+            return false;
+    }
+    /** CREAMOS LAS COOKIES **/
+    createCookie('name', nombre, 7);
+    createCookie('surname1', apellido1, 7);
+    createCookie('surname2', apellido2, 7);
+    createCookie('email', email, 7);
+
+    return true
+}
+function seleccionaOpcion() {
+    var auxCont = document.getElementById("options");
+    var auxOpcion = document.getElementById("options2");
+    auxOpcion.disabled = false;
+    var opcionSeleccionada = auxCont.selectedIndex;
+    var opcion = auxCont.options[opcionSeleccionada].text;
+
+    var opciones = {};
+    opciones['Sugerencia'] = ['Mejoras', 'Bugs', 'Otas'];
+    opciones['Queja'] = ['Grave', 'Muy Grave', 'Extremadamente Grave'];
+    opciones['Informacion'] = ['Facturacion', 'Personal', 'Otro'];
+
+
+    while (auxOpcion.options.length) {
+        auxOpcion.remove(0);
+    }
+    if (opcion == 'Ninguna') {
+        auxOpcion.disabled = true;
+    }
+    var ciudad = opciones[opcion];
+
+
+    for (var i = 0; i < ciudad.length; i++) {
+        var aux = new Option(ciudad[i]);
+        auxOpcion.options.add(aux);
+    }
+
+}
+/**
+ * Funcion que comprueba si un campo tiene un error y si lo tiene genera un div debajo
+ * indicando con un mensaje como debe rellenarse el campo
+ * @param field
+ * @param id
+ */
+function onError(field, id) {
+    var mensaje = '';
+    switch (id) {
+        case 'name':
+        case 'surname1':
+        case 'surname2':
+            mensaje = (!chk(regexString, field.value)) ? 'Introduce solo letras, por favor' : '';
+            break;
+        case 'email':
+            mensaje = (!chk(regexEmail, field.value)) ? 'Introduce el email correcamente, por favor' : '';
+            break;
+        case 'phone':
+            mensaje = (!chk(regexTelefonoFijo, field.value)) ? 'El teléfono debe empezar por 9 y tener 9 cifras ' : '';
+            break;
+        case 'mobil':
+            mensaje = (!chk(regexTelefonoMovil, field.value)) ? 'El teléfono debe empezar por 6 y tener 9 cifras ' : '';
+            break;
+    }
+    var div = field.nextElementSibling;
+    div.classList.add('help-block');
+    div.innerHTML = mensaje;
+<<<<<<< HEAD
+
+
+}
+=======
+    if (field.value == ''){
+        div = field.nextElementSibling;
+        div.innerHTML = 'Rellene el campo, por favor';
+    }
+
+}
+/**
+ * funcion que llamamos con un envento onblur para que si el campo se deja vacio sin rellenar borre el mensaje
+ * de error.
+ * @param field
+ */
+function vaciarError(field){
+    if(field.value == ''){
+        var div = field.nextElementSibling;
+        div.innerHTML = '';
+
+    }
+}
+
+>>>>>>> f5b3544abc7d1ca6b54d1d2f723e95d1548ed4b6
