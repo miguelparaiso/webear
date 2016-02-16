@@ -124,8 +124,8 @@
   top: 22px;
   right: 30px;
 }
-#menu > ul > li.has-sub > a::after:hover {
-  color: #000;
+#menu > ul > li.has-sub > a:hover::after {
+  border-top-color: #000;
 }
 #menu > ul > li.has-sub.active > a::after,
 #menu > ul > li.has-sub:hover > a {
@@ -284,7 +284,7 @@
   }
 }
 
-@media all and (max-width: 768px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
+@media all and (max-width: 768px), only screen and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
   #menu {
     background: #006e9d;
     height: 45px;
