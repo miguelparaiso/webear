@@ -231,7 +231,9 @@ section .intro-caption h2 {
     font-weight: bold;
 	margin: 0;
 }
-section .intro-caption h3 {
+section .intro-caption span {
+	display: block;
+	font-size: 1.5em;
     padding: 20px 27px;
     border-left: 3px solid #006e9d;
     background-color: #fff;
