@@ -51,6 +51,9 @@ body {
 [class*="col-"] {
 	padding: 10px;
 }
+.bold {
+	font-weight: bold;
+}
 .align-center {text-align: center;}
 @font-face {
   font-family: 'Titillium Web';
