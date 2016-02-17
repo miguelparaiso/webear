@@ -51,7 +51,20 @@ body {
 [class*="col-"] {
 	padding: 10px;
 }
+.bold {
+	font-weight: bold;
+}
 .align-center {text-align: center;}
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0,0,0,0);
+	border: 0;
+}
 @font-face {
   font-family: 'Titillium Web';
   font-style: normal;
@@ -218,7 +231,9 @@ section .intro-caption h2 {
     font-weight: bold;
 	margin: 0;
 }
-section .intro-caption h3 {
+section .intro-caption span {
+	display: block;
+	font-size: 1.5em;
     padding: 20px 27px;
     border-left: 3px solid #006e9d;
     background-color: #fff;
