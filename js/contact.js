@@ -98,32 +98,14 @@ function validar() {
     return true
 }
 function seleccionaOpcion() {
-    var auxCont = document.getElementById("options");
     var auxOpcion = document.getElementById("options2");
     auxOpcion.disabled = false;
-    var opcionSeleccionada = auxCont.selectedIndex;
-    var opcion = auxCont.options[opcionSeleccionada].text;
-
-    var opciones = {};
-    opciones['Sugerencia'] = ['Mejoras', 'Bugs', 'Otas'];
-    opciones['Queja'] = ['Grave', 'Muy Grave', 'Extremadamente Grave'];
-    opciones['Informacion'] = ['Facturacion', 'Personal', 'Otro'];
-
-
-    while (auxOpcion.options.length) {
-        auxOpcion.remove(0);
-    }
-    if (opcion == 'Ninguna') {
+    var itemSeleccionado = getSelectedItem('options');
+    if (itemSeleccionado != 'Ninguna') {
+        obtenerDatosServidor(itemSeleccionado, 'titulo');
+    } else {
         auxOpcion.disabled = true;
     }
-    var ciudad = opciones[opcion];
-
-
-    for (var i = 0; i < ciudad.length; i++) {
-        var aux = new Option(ciudad[i]);
-        auxOpcion.options.add(aux);
-    }
-
 }
 /**
  * Funcion que comprueba si un campo tiene un error y si lo tiene genera un div debajo
@@ -153,7 +135,7 @@ function onError(field, id) {
     div.classList.add('help-block');
     div.innerHTML = mensaje;
 
-    if (field.value == ''){
+    if (field.value == '') {
         div = field.nextElementSibling;
         div.innerHTML = 'Rellene el campo, por favor';
     }
@@ -164,11 +146,12 @@ function onError(field, id) {
  * de error.
  * @param field
  */
-function vaciarError(field){
-    if(field.value == ''){
+function vaciarError(field) {
+    if (field.value == '') {
         var div = field.nextElementSibling;
         div.innerHTML = '';
 
     }
 }
+
 

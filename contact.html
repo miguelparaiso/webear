@@ -18,6 +18,7 @@
     <script type="text/javascript" src="js/licenciaPopUp.js"></script>
     <script type="text/javascript" src="js/cookies.js"></script>
     <script type="text/javascript" src="js/cookiebar.js"></script>
+    <script type="text/javascript" src="js/servidor.js"></script>
     <link rel="stylesheet" href="css/cookiebar.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/contact.css">
@@ -135,7 +136,7 @@
                         <div class="flex">
                             <div class="col-6">
                                 <label for="options"> Seleccione el motivo de contacto:</label>
-                                <select required id="options" onchange="seleccionaOpcion()">
+                                <select required id="options" onchange="seleccionaOpcion()" name="titulo">
                                     <option selected value="Ninguna">Ninguna</option>
                                     <option value="Sugerencia">Sugerencia</option>
                                     <option value="Queja">Queja</option>
@@ -144,11 +145,7 @@
                             </div>
                             <div class="col-6">
                                 <label for="options2"> Sobre que asunto:</label>
-                                <select id="options2" disabled>
-                                    <option selected value="">-------------</option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                </select>
+                                <select id="options2" disabled></select>
                             </div>
                         </div>
                     </li>
