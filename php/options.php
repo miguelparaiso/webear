@@ -5,7 +5,7 @@ $opciones['Informacion'] = ['Facturacion', 'Personal', 'Otro'];
 
 $response = $_POST['titulo'];
 $doc = json_decode($response, true);
-$titulacion = $doc['titulacion'];
+$titulacion = $doc['opcion'];
 
 $objeto_json = new stdClass();
 $objeto_json->opciones = $opciones[$titulacion];

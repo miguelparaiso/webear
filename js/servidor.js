@@ -12,7 +12,7 @@ function obtenerDatosServidor(selectedItem, nomPost) {
         objetoXHR.open("POST", 'php/options.php', true); //conexion abierta con el servidor
         objetoXHR.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); //cabecera enviada al servidor, espera una cadena
          //item seleccionado por el usuario
-        var data = JSON.stringify({titulacion: selectedItem}); // string del objeto JSON
+        var data = JSON.stringify({opcion: selectedItem}); // string del objeto JSON
         var querystring = createQueryString(nomPost, data); // creacion del querystring
         objetoXHR.send(querystring); //envio de la peticion al servidor mediante querystring que recibira por post
     }
