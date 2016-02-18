@@ -30,7 +30,6 @@
 }
 #header-form .required_notification {
     width: 50%;
-    color: #d45252;
     text-align: right;
     margin: 75px 0 0 0;
 }
@@ -120,7 +119,7 @@
 }
 /* ESTILOS PARA VERIFICAR LOS CAMPOS*/
 #contact-form input:required, #contact-form textarea:required {
-    background: #fff url(../img/form/red_asterisk.png) no-repeat 98% center;
+    background: #fff url(../img/form/black_asterisk.png) no-repeat 98% center;
 }
 #contact-form input:focus:invalid,  #contact-form textarea:focus:invalid {
     background: #fff url(../img/form/invalid.png) no-repeat 98% center;
@@ -180,23 +179,23 @@
         padding: 5px 0;
     }
     form label, form input {
-		display: block !important;
-		width: 60% !important;
+        display: block !important;
+        width: 60% !important;
         margin: 0 20%;
-		float: none !important;
-		clear: both !important;
-	}
+        float: none !important;
+        clear: both !important;
+    }
     form select {
         display: block !important;
         width: 50% !important;
         margin: 5px  auto !important;
-		float: none !important;
-		clear: both !important;
+        float: none !important;
+        clear: both !important;
     }
     form .boton {
         width: 80px !important;
         height: 30px !important;
         margin: 5px auto !important;
     }
-    
+
 }
