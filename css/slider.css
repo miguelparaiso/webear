@@ -735,4 +735,8 @@ only screen and (                max-resolution: 2dppx)  and (max-width: 480px) 
   .csslider1 > ul {
     height: auto;
   }
+  
+  .csslider1 > .cs_arrowprev, .csslider1 > .cs_arrownext, .csslider1 > .cs_play_pause {
+    width: 100px !important;
+  }
 }
