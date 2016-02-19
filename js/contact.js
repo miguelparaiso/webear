@@ -14,7 +14,7 @@ var regexTelefonoFijo = /^9\d{8}$/;
  * de ser asi habilita el campo de terminos y condiciones
  */
 function habilitar() {
-    var array = Array();
+    var array = new Array();
     array.push(document.getElementById("name").value.length);
     array.push(document.getElementById("surname1").value.length);
     array.push(document.getElementById("surname2").value.length);
@@ -125,10 +125,10 @@ function onError(field, id) {
             mensaje = (!chk(regexEmail, field.value)) ? 'Introduce el email correcamente, por favor' : '';
             break;
         case 'phone':
-            mensaje = (!chk(regexTelefonoFijo, field.value)) ? 'El teléfono debe empezar por 9 y tener 9 cifras ' : '';
+            mensaje = (!chk(regexTelefonoFijo, field.value)) ? 'El teléfono fijo debe empezar por 9 y tener 9 cifras ' : '';
             break;
         case 'mobil':
-            mensaje = (!chk(regexTelefonoMovil, field.value)) ? 'El teléfono debe empezar por 6 y tener 9 cifras ' : '';
+            mensaje = (!chk(regexTelefonoMovil, field.value)) ? 'El teléfono móvil debe empezar por 6 y tener 9 cifras ' : '';
             break;
     }
     var div = field.nextElementSibling;
